@@ -1,0 +1,2216 @@
+﻿<Window xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"  xmlns:dxgn="http://schemas.devexpress.com/winfx/2008/xaml/gantt"  xmlns:dxdash="http://schemas.devexpress.com/winfx/2008/xaml/dashboard"  xmlns:dxga="http://schemas.devexpress.com/winfx/2008/xaml/gauges"  x:Class="EIDS._2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:EIDS.Instrumentos"
+        xmlns:local="clr-namespace:EIDS"
+        mc:Ignorable="d"
+        Title="_2" Height="1080" Width="1920" WindowState="Maximized" MaxWidth="1920" MaxHeight="1080">
+    <Window.DataContext>
+        <vm:VM2/>
+    </Window.DataContext>
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3.5555555555555555555*"/>
+            <RowDefinition Height="3.7354085603112*"/>
+        </Grid.RowDefinitions>
+        <!-- //////////////////////////////GRID 1////////////////////////////// -->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8.9719626168224*"/>
+                <ColumnDefinition Width="2.2508792497069*"/>
+                <ColumnDefinition Width="8.9719626168224*"/>
+            </Grid.ColumnDefinitions>
+            <!-- //////////////////////////////TEXTO DE FONDO////////////////////////////// -->
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" HorizontalAlignment="Center" TextWrapping="Wrap" Text="OIL" VerticalAlignment="Top" Height="40" Width="80" Foreground="White" FontSize="36" FontFamily="Source Code Pro Black"/>
+                <TextBlock Grid.Row="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="°C" VerticalAlignment="Top" Height="40" Width="80" Foreground="White" FontSize="36" FontFamily="Source Code Pro Black"/>
+                <TextBlock Grid.Row="3" HorizontalAlignment="Center" TextWrapping="Wrap" Text="OIL" VerticalAlignment="Top" Height="40" Width="80" Foreground="White" FontSize="36" FontFamily="Source Code Pro Black"/>
+                <TextBlock Grid.Row="4" HorizontalAlignment="Center" TextWrapping="Wrap" Text="PSI" VerticalAlignment="Top" Height="40" Width="80" Foreground="White" FontSize="36" FontFamily="Source Code Pro Black"/>
+                <TextBlock Grid.Row="7" HorizontalAlignment="Center" TextWrapping="Wrap" Text="OIL" VerticalAlignment="Top" Height="40" Width="80" Foreground="White" FontSize="36" FontFamily="Source Code Pro Black"/>
+                <TextBlock Grid.Row="8" HorizontalAlignment="Center" TextWrapping="Wrap" Text="GALLONS" VerticalAlignment="Top" Height="40" Width="158" Foreground="White" FontSize="36" FontFamily="Source Code Pro Black"/>
+                <TextBlock Grid.Row="9" HorizontalAlignment="Center" TextWrapping="Wrap" Text="COOLER" VerticalAlignment="Top" Height="40" Width="137" Foreground="White" FontSize="36" FontFamily="Source Code Pro Black"/>
+                <TextBlock Grid.Row="10" HorizontalAlignment="Center" TextWrapping="Wrap" Text="FLAPS" VerticalAlignment="Top" Height="40" Width="122" Foreground="White" FontSize="36" FontFamily="Source Code Pro Black"/>
+                <Border Grid.Row="10" Margin="0,0,0,0" BorderThickness="5" BorderBrush="White" VerticalAlignment="Bottom"/>
+            </Grid>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- //////////////////////////////OIL TEMP 1////////////////////////////// -->
+                    <Border Grid.Column="0" BorderThickness="2" BorderBrush="{Binding Ceot1}" HorizontalAlignment="Right" VerticalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Eot1}" VerticalAlignment="Center" Height="39" Width="80" Foreground="{Binding Feot1}" FontSize="25" FontFamily="Source Code Pro Black" Background="{Binding Beot1}"/>
+                    </Border>
+                    <!-- //////////////////////////////OIL COOLER 1////////////////////////////// -->
+                    <Border Grid.Column="1" Name="oilcoolc1" BorderThickness="2" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Name="oilcool1" HorizontalAlignment="Center" Margin="5" TextWrapping="Wrap" Text="AUG" VerticalAlignment="Center" Height="39" Width="230" Foreground="Black" FontSize="25" FontFamily="Source Code Pro Black"/>
+                    </Border>
+                    <!-- //////////////////////////////OIL TEMP 2////////////////////////////// -->
+                    <Border Grid.Column="2" BorderThickness="2" BorderBrush="{Binding Ceot2}" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Eot2}" VerticalAlignment="Center" Height="39" Width="80" Foreground="{Binding Feot2}" FontSize="25" FontFamily="Source Code Pro Black" Background="{Binding Beot2}"/>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- //////////////////////////////EOP 1////////////////////////////// -->
+                    <Border Grid.Column="0" BorderThickness="2" BorderBrush="{Binding Ceop1}" HorizontalAlignment="Right" VerticalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Eop1}" VerticalAlignment="Center" Height="34" Width="65" Foreground="{Binding Feop1}" FontSize="25" FontFamily="Source Code Pro Black" Background="{Binding Beop1}"/>
+                    </Border>
+                    <!-- //////////////////////////////GBOP 1////////////////////////////// -->
+                    <Border Grid.Column="1" BorderThickness="2" BorderBrush="{Binding Cgbop1}" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Gbop1}" VerticalAlignment="Center" Height="34" Width="65" Foreground="{Binding Fgbop1}" FontSize="25" FontFamily="Source Code Pro Black" Background="{Binding Bgbop1}"/>
+                    </Border>
+                    <!-- //////////////////////////////EOP 2////////////////////////////// -->
+                    <Border Grid.Column="3" BorderThickness="2" BorderBrush="{Binding Ceop2}" HorizontalAlignment="Right" VerticalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Eop2}" VerticalAlignment="Center" Height="34" Width="65" Foreground="{Binding Feop2}" FontSize="25" FontFamily="Source Code Pro Black" Background="{Binding Beop2}"/>
+                    </Border>
+                    <!-- //////////////////////////////GBOP 2////////////////////////////// -->
+                    <Border Grid.Column="4" BorderThickness="2" BorderBrush="{Binding Cgbop2}" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Gbop2}" VerticalAlignment="Center" Height="34" Width="65" Foreground="{Binding Fgbop2}" FontSize="25" FontFamily="Source Code Pro Black" Background="{Binding Bgbop2}"/>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- //////////////////////////////EOP 1////////////////////////////// -->
+                    <Grid Grid.Column="0" HorizontalAlignment="Right" Height="148" Margin="0,0,0,0" VerticalAlignment="Center" Width="130">
+                        <TextBox Background="Black" HorizontalAlignment="Left" Height="22" Margin="94,40,0,0" TextWrapping="Wrap" Text="ENG" VerticalAlignment="Top" Width="36" BorderBrush="Black" FontFamily="Segoe UI Black" CaretBrush="Black" Foreground="White"/>
+                        <Border Margin="90,24,0,106" BorderThickness="2" BorderBrush="{Binding Celp1}">
+                            <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Text="ELP" VerticalAlignment="Center" Height="16" Width="36" Foreground="{Binding Felp1}" FontSize="15" FontFamily="Source Code Pro Black" Margin="0,-2,0,0"/>
+                        </Border>
+                        <dxga:CircularGaugeControl >
+                            <dxga:CircularGaugeControl.Scales >
+                                <dxga:ArcScale EndAngle="240" EndValue="120" Foreground="White" Height="220" Margin="130,0,0,0" MajorIntervalCount="2" MinorIntervalCount="1" ShowSpindleCap="False" ShowMinorTickmarks="False" ShowLabels="False" ShowLine="True" ShowMajorTickmarks="True" StartAngle="120" UseLayoutRounding="False" Width="220">
+                                    <dxga:ArcScale.RangeBars>
+                                        <dxga:ArcScaleRangeBar AnchorValue="{Binding B1eop1}" IsInteractive="True">
+                                            <dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleRangeBar.Animation>
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-32" Thickness="8"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                        <dxga:ArcScaleRangeBar AnchorValue="{Binding B2eop1}" IsInteractive="True">
+                                            <dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleRangeBar.Animation>
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-32" Thickness="8"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Red"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                    </dxga:ArcScale.RangeBars>
+                                    <dxga:ArcScale.Markers>
+                                        <dxga:ArcScaleMarker Value="98">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="94">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="26">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="22">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                    </dxga:ArcScale.Markers>
+                                    <dxga:ArcScale.LabelOptions>
+                                        <dxga:ArcScaleLabelOptions ShowLast="False" ShowFirst="False"/>
+                                    </dxga:ArcScale.LabelOptions>
+                                    <dxga:ArcScale.LinePresentation>
+                                        <dxga:CleanWhiteArcScaleLinePresentation Fill="White"/>
+                                    </dxga:ArcScale.LinePresentation>
+                                    <dxga:ArcScale.LabelPresentation>
+                                        <dxga:CleanWhiteScaleLabelPresentation/>
+                                    </dxga:ArcScale.LabelPresentation>
+                                    <dxga:ArcScale.LineOptions>
+                                        <dxga:ScaleLineOptions Thickness="2"/>
+                                    </dxga:ArcScale.LineOptions>
+                                    <dxga:ArcScale.MajorTickmarkOptions>
+                                        <dxga:MajorTickmarkOptions/>
+                                    </dxga:ArcScale.MajorTickmarkOptions>
+                                    <dxga:ArcScale.Needles>
+                                        <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding Aeop1}">
+                                            <dxga:ArcScaleNeedle.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleNeedle.Animation>
+                                            <dxga:ArcScaleNeedle.Presentation>
+                                                <dxga:YellowSubmarineArcScaleNeedlePresentation Fill="White"/>
+                                            </dxga:ArcScaleNeedle.Presentation>
+                                        </dxga:ArcScaleNeedle>
+                                    </dxga:ArcScale.Needles>
+                                    <dxga:ArcScale.Ranges>
+                                        <dxga:ArcScaleRange EndValue="80%" StartValue="20%">
+                                            <dxga:ArcScaleRange.Presentation>
+                                                <dxga:DefaultArcScaleRangePresentation Fill="#FF00FF23"/>
+                                            </dxga:ArcScaleRange.Presentation>
+                                            <dxga:ArcScaleRange.Options>
+                                                <dxga:RangeOptions Offset="-27" Thickness="6"/>
+                                            </dxga:ArcScaleRange.Options>
+                                        </dxga:ArcScaleRange>
+                                    </dxga:ArcScale.Ranges>
+                                    <dxga:ArcScale.SpindleCapOptions>
+                                        <dxga:SpindleCapOptions/>
+                                    </dxga:ArcScale.SpindleCapOptions>
+                                    <dxga:ArcScale.TickmarksPresentation>
+                                        <dxga:DefaultTickmarksPresentation MajorTickBrush="White"/>
+                                    </dxga:ArcScale.TickmarksPresentation>
+                                </dxga:ArcScale>
+                            </dxga:CircularGaugeControl.Scales>
+                        </dxga:CircularGaugeControl>
+                    </Grid>
+                    <!-- //////////////////////////////GBOP 1////////////////////////////// -->
+                    <Grid Grid.Column="1" HorizontalAlignment="Left" Height="148" Margin="0,0,0,0" VerticalAlignment="Center" Width="130">
+                        <TextBox Background="Black" HorizontalAlignment="Left" Height="22" Margin="0,39,0,0" TextWrapping="Wrap" Text="GB" VerticalAlignment="Top" Width="28" BorderBrush="Black" FontFamily="Segoe UI Black" CaretBrush="Black" Foreground="White"/>
+                        <dxga:CircularGaugeControl >
+                            <dxga:CircularGaugeControl.Scales>
+                                <dxga:ArcScale EndAngle="-60" EndValue="300" MajorIntervalCount="2" MinorIntervalCount="1" StartAngle="60" StartValue="0" Foreground="White" Height="220" Margin="-130,0,0,0" ShowSpindleCap="False" ShowMinorTickmarks="False" ShowLabels="False" ShowLine="True" ShowMajorTickmarks="True" UseLayoutRounding="False" Width="220">
+                                    <dxga:ArcScale.RangeBars>
+                                        <dxga:ArcScaleRangeBar AnchorValue="{Binding B1gbop1}" IsInteractive="True">
+                                            <dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleRangeBar.Animation>
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-32" Thickness="8"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                        <dxga:ArcScaleRangeBar AnchorValue="{Binding B2gbop1}" IsInteractive="True">
+                                            <dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleRangeBar.Animation>
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-32" Thickness="8"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Red"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                    </dxga:ArcScale.RangeBars>
+                                    <dxga:ArcScale.Markers>
+                                        <dxga:ArcScaleMarker Value="245">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="235">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="65">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="55">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                    </dxga:ArcScale.Markers>
+                                    <dxga:ArcScale.LabelOptions>
+                                        <dxga:ArcScaleLabelOptions ShowLast="False" ShowFirst="False"/>
+                                    </dxga:ArcScale.LabelOptions>
+                                    <dxga:ArcScale.LinePresentation>
+                                        <dxga:CleanWhiteArcScaleLinePresentation Fill="White"/>
+                                    </dxga:ArcScale.LinePresentation>
+                                    <dxga:ArcScale.LabelPresentation>
+                                        <dxga:CleanWhiteScaleLabelPresentation/>
+                                    </dxga:ArcScale.LabelPresentation>
+                                    <dxga:ArcScale.LineOptions>
+                                        <dxga:ScaleLineOptions Thickness="2"/>
+                                    </dxga:ArcScale.LineOptions>
+                                    <dxga:ArcScale.MajorTickmarkOptions>
+                                        <dxga:MajorTickmarkOptions/>
+                                    </dxga:ArcScale.MajorTickmarkOptions>
+                                    <dxga:ArcScale.Needles>
+                                        <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding Agbop1}">
+                                            <dxga:ArcScaleNeedle.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleNeedle.Animation>
+                                            <dxga:ArcScaleNeedle.Presentation>
+                                                <dxga:YellowSubmarineArcScaleNeedlePresentation Fill="White"/>
+                                            </dxga:ArcScaleNeedle.Presentation>
+                                        </dxga:ArcScaleNeedle>
+                                    </dxga:ArcScale.Needles>
+                                    <dxga:ArcScale.Ranges>
+                                        <dxga:ArcScaleRange EndValue="80%" StartValue="20%">
+                                            <dxga:ArcScaleRange.Presentation>
+                                                <dxga:DefaultArcScaleRangePresentation Fill="#FF00FF23"/>
+                                            </dxga:ArcScaleRange.Presentation>
+                                            <dxga:ArcScaleRange.Options>
+                                                <dxga:RangeOptions Offset="-27" Thickness="6"/>
+                                            </dxga:ArcScaleRange.Options>
+                                        </dxga:ArcScaleRange>
+                                    </dxga:ArcScale.Ranges>
+                                    <dxga:ArcScale.SpindleCapOptions>
+                                        <dxga:SpindleCapOptions/>
+                                    </dxga:ArcScale.SpindleCapOptions>
+                                    <dxga:ArcScale.TickmarksPresentation>
+                                        <dxga:DefaultTickmarksPresentation MajorTickBrush="White"/>
+                                    </dxga:ArcScale.TickmarksPresentation>
+                                </dxga:ArcScale>
+                            </dxga:CircularGaugeControl.Scales>
+                        </dxga:CircularGaugeControl>
+                    </Grid>
+                    <!-- //////////////////////////////EOP 2////////////////////////////// -->
+                    <Grid Grid.Column="3" HorizontalAlignment="Right" Height="148" Margin="0,0,0,0" VerticalAlignment="Center" Width="130">
+                        <TextBox Background="Black" HorizontalAlignment="Left" Height="22" Margin="94,40,0,0" TextWrapping="Wrap" Text="ENG" VerticalAlignment="Top" Width="36" BorderBrush="Black" FontFamily="Segoe UI Black" CaretBrush="Black" Foreground="White"/>
+                        <Border Margin="90,24,0,106" BorderThickness="2" BorderBrush="{Binding Celp2}">
+                            <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Text="ELP" VerticalAlignment="Center" Height="16" Width="36" Foreground="{Binding Felp2}" FontSize="15" FontFamily="Source Code Pro Black" Margin="0,-2,0,0"/>
+                        </Border>
+                        <dxga:CircularGaugeControl >
+                            <dxga:CircularGaugeControl.Scales >
+                                <dxga:ArcScale EndAngle="240" EndValue="120" Foreground="White" Height="220" Margin="130,0,0,0" MajorIntervalCount="2" MinorIntervalCount="1" ShowSpindleCap="False" ShowMinorTickmarks="False" ShowLabels="False" ShowLine="True" ShowMajorTickmarks="True" StartAngle="120" UseLayoutRounding="False" Width="220">
+                                    <dxga:ArcScale.RangeBars>
+                                        <dxga:ArcScaleRangeBar AnchorValue="{Binding B1eop2}" IsInteractive="True">
+                                            <dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleRangeBar.Animation>
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-32" Thickness="8"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                        <dxga:ArcScaleRangeBar AnchorValue="{Binding B2eop2}" IsInteractive="True">
+                                            <dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleRangeBar.Animation>
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-32" Thickness="8"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Red"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                    </dxga:ArcScale.RangeBars>
+                                    <dxga:ArcScale.Markers>
+                                        <dxga:ArcScaleMarker Value="98">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="94">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="26">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="22">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                    </dxga:ArcScale.Markers>
+                                    <dxga:ArcScale.LabelOptions>
+                                        <dxga:ArcScaleLabelOptions ShowLast="False" ShowFirst="False"/>
+                                    </dxga:ArcScale.LabelOptions>
+                                    <dxga:ArcScale.LinePresentation>
+                                        <dxga:CleanWhiteArcScaleLinePresentation Fill="White"/>
+                                    </dxga:ArcScale.LinePresentation>
+                                    <dxga:ArcScale.LabelPresentation>
+                                        <dxga:CleanWhiteScaleLabelPresentation/>
+                                    </dxga:ArcScale.LabelPresentation>
+                                    <dxga:ArcScale.LineOptions>
+                                        <dxga:ScaleLineOptions Thickness="2"/>
+                                    </dxga:ArcScale.LineOptions>
+                                    <dxga:ArcScale.MajorTickmarkOptions>
+                                        <dxga:MajorTickmarkOptions/>
+                                    </dxga:ArcScale.MajorTickmarkOptions>
+                                    <dxga:ArcScale.Needles>
+                                        <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding Aeop2}">
+                                            <dxga:ArcScaleNeedle.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleNeedle.Animation>
+                                            <dxga:ArcScaleNeedle.Presentation>
+                                                <dxga:YellowSubmarineArcScaleNeedlePresentation Fill="White"/>
+                                            </dxga:ArcScaleNeedle.Presentation>
+                                        </dxga:ArcScaleNeedle>
+                                    </dxga:ArcScale.Needles>
+                                    <dxga:ArcScale.Ranges>
+                                        <dxga:ArcScaleRange EndValue="80%" StartValue="20%">
+                                            <dxga:ArcScaleRange.Presentation>
+                                                <dxga:DefaultArcScaleRangePresentation Fill="#FF00FF23"/>
+                                            </dxga:ArcScaleRange.Presentation>
+                                            <dxga:ArcScaleRange.Options>
+                                                <dxga:RangeOptions Offset="-27" Thickness="6"/>
+                                            </dxga:ArcScaleRange.Options>
+                                        </dxga:ArcScaleRange>
+                                    </dxga:ArcScale.Ranges>
+                                    <dxga:ArcScale.SpindleCapOptions>
+                                        <dxga:SpindleCapOptions/>
+                                    </dxga:ArcScale.SpindleCapOptions>
+                                    <dxga:ArcScale.TickmarksPresentation>
+                                        <dxga:DefaultTickmarksPresentation MajorTickBrush="White"/>
+                                    </dxga:ArcScale.TickmarksPresentation>
+                                </dxga:ArcScale>
+                            </dxga:CircularGaugeControl.Scales>
+                        </dxga:CircularGaugeControl>
+                    </Grid>
+                    <!-- //////////////////////////////GBOP 2////////////////////////////// -->
+                    <Grid Grid.Column="4" HorizontalAlignment="Left" Height="148" Margin="0,0,0,0" VerticalAlignment="Center" Width="130">
+                        <TextBox Background="Black" HorizontalAlignment="Left" Height="22" Margin="0,39,0,0" TextWrapping="Wrap" Text="GB" VerticalAlignment="Top" Width="28" BorderBrush="Black" FontFamily="Segoe UI Black" CaretBrush="Black" Foreground="White"/>
+                        <dxga:CircularGaugeControl >
+                            <dxga:CircularGaugeControl.Scales>
+                                <dxga:ArcScale EndAngle="-60" EndValue="300" MajorIntervalCount="2" MinorIntervalCount="1" StartAngle="60" StartValue="0" Foreground="White" Height="220" Margin="-130,0,0,0" ShowSpindleCap="False" ShowMinorTickmarks="False" ShowLabels="False" ShowLine="True" ShowMajorTickmarks="True" UseLayoutRounding="False" Width="220">
+                                    <dxga:ArcScale.RangeBars>
+                                        <dxga:ArcScaleRangeBar AnchorValue="{Binding B1gbop2}" IsInteractive="True">
+                                            <dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleRangeBar.Animation>
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-32" Thickness="8"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                        <dxga:ArcScaleRangeBar AnchorValue="{Binding B2gbop2}" IsInteractive="True">
+                                            <dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleRangeBar.Animation>
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-32" Thickness="8"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Red"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                    </dxga:ArcScale.RangeBars>
+                                    <dxga:ArcScale.Markers>
+                                        <dxga:ArcScaleMarker Value="245">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="235">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="65">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="55">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                    </dxga:ArcScale.Markers>
+                                    <dxga:ArcScale.LabelOptions>
+                                        <dxga:ArcScaleLabelOptions ShowLast="False" ShowFirst="False"/>
+                                    </dxga:ArcScale.LabelOptions>
+                                    <dxga:ArcScale.LinePresentation>
+                                        <dxga:CleanWhiteArcScaleLinePresentation Fill="White"/>
+                                    </dxga:ArcScale.LinePresentation>
+                                    <dxga:ArcScale.LabelPresentation>
+                                        <dxga:CleanWhiteScaleLabelPresentation/>
+                                    </dxga:ArcScale.LabelPresentation>
+                                    <dxga:ArcScale.LineOptions>
+                                        <dxga:ScaleLineOptions Thickness="2"/>
+                                    </dxga:ArcScale.LineOptions>
+                                    <dxga:ArcScale.MajorTickmarkOptions>
+                                        <dxga:MajorTickmarkOptions/>
+                                    </dxga:ArcScale.MajorTickmarkOptions>
+                                    <dxga:ArcScale.Needles>
+                                        <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding Agbop2}">
+                                            <dxga:ArcScaleNeedle.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleNeedle.Animation>
+                                            <dxga:ArcScaleNeedle.Presentation>
+                                                <dxga:YellowSubmarineArcScaleNeedlePresentation Fill="White"/>
+                                            </dxga:ArcScaleNeedle.Presentation>
+                                        </dxga:ArcScaleNeedle>
+                                    </dxga:ArcScale.Needles>
+                                    <dxga:ArcScale.Ranges>
+                                        <dxga:ArcScaleRange EndValue="80%" StartValue="20%">
+                                            <dxga:ArcScaleRange.Presentation>
+                                                <dxga:DefaultArcScaleRangePresentation Fill="#FF00FF23"/>
+                                            </dxga:ArcScaleRange.Presentation>
+                                            <dxga:ArcScaleRange.Options>
+                                                <dxga:RangeOptions Offset="-27" Thickness="6"/>
+                                            </dxga:ArcScaleRange.Options>
+                                        </dxga:ArcScaleRange>
+                                    </dxga:ArcScale.Ranges>
+                                    <dxga:ArcScale.SpindleCapOptions>
+                                        <dxga:SpindleCapOptions/>
+                                    </dxga:ArcScale.SpindleCapOptions>
+                                    <dxga:ArcScale.TickmarksPresentation>
+                                        <dxga:DefaultTickmarksPresentation MajorTickBrush="White"/>
+                                    </dxga:ArcScale.TickmarksPresentation>
+                                </dxga:ArcScale>
+                            </dxga:CircularGaugeControl.Scales>
+                        </dxga:CircularGaugeControl>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <!-- //////////////////////////////EOQ 1////////////////////////////// -->
+                        <Grid Grid.Row="0" HorizontalAlignment="Center" Height="60" Margin="0,0,0,0" VerticalAlignment="Center" Width="204">
+                            <Border BorderThickness="2" BorderBrush="{Binding Ceoq1}">
+                                <dxga:LinearGaugeControl>
+                                    <dxga:LinearGaugeControl.Scales>
+                                        <dxga:LinearScale EndValue="19" HorizontalAlignment="Left" Height="100" LayoutMode="LeftToRight" Margin="-43,20,0,0" MajorIntervalCount="1" MinorIntervalCount="1" Width="200" ShowMinorTickmarks="False" ShowLabels="False" ShowLine="False" ShowMajorTickmarks="False">
+                                            <dxga:LinearScale.Markers>
+                                                <dxga:LinearScaleMarker Value="4">
+                                                    <dxga:LinearScaleMarker.Options>
+                                                        <dxga:LinearScaleMarkerOptions FactorHeight="5" Offset="-34"/>
+                                                    </dxga:LinearScaleMarker.Options>
+                                                    <dxga:LinearScaleMarker.Presentation>
+                                                        <dxga:MagicLightLinearScaleMarkerPresentation Fill="Red"/>
+                                                    </dxga:LinearScaleMarker.Presentation>
+                                                </dxga:LinearScaleMarker>
+                                            </dxga:LinearScale.Markers>
+                                            <dxga:LinearScale.RangeBars>
+                                                <dxga:LinearScaleRangeBar AnchorValue="{Binding Veoq1}" IsInteractive="True">
+                                                    <dxga:LinearScaleRangeBar.Animation>
+                                                        <dxga:IndicatorAnimation/>
+                                                    </dxga:LinearScaleRangeBar.Animation>
+                                                    <dxga:LinearScaleRangeBar.Options>
+                                                        <dxga:LinearScaleRangeBarOptions Offset="-34" Thickness="52"/>
+                                                    </dxga:LinearScaleRangeBar.Options>
+                                                    <dxga:LinearScaleRangeBar.Presentation>
+                                                        <dxga:DefaultLinearScaleRangeBarPresentation Fill="#FF7EB2C1"/>
+                                                    </dxga:LinearScaleRangeBar.Presentation>
+                                                </dxga:LinearScaleRangeBar>
+                                            </dxga:LinearScale.RangeBars>
+                                        </dxga:LinearScale>
+                                    </dxga:LinearGaugeControl.Scales>
+                                </dxga:LinearGaugeControl>
+                            </Border>
+                            <TextBlock HorizontalAlignment="Left" Margin="98,10,0,0" TextWrapping="Wrap" Text="{Binding Eoq1}" VerticalAlignment="Top" Height="37" Foreground="{Binding Feoq1}" FontSize="30" Background="{Binding Beoq1}"/>
+                        </Grid>
+                        <!-- //////////////////////////////OCFP 1////////////////////////////// -->
+                        <Grid Grid.Row="1" HorizontalAlignment="Center" Height="60" Margin="0,0,0,0" VerticalAlignment="Center" Width="204">
+                            <dxga:LinearGaugeControl>
+                                <dxga:LinearGaugeControl.Scales>
+                                    <dxga:LinearScale HorizontalAlignment="Center" Height="100" LayoutMode="LeftToRight" Margin="0,12,0,0" VerticalAlignment="Center" Width="200" EndValue="10" MajorIntervalCount="2" ShowLabels="False" >
+                                        <dxga:LinearScale.CustomElements>
+                                            <dxga:ScaleCustomElement Background="Red" Content="FLAPS" Foreground="Black" FontSize="36" HorizontalAlignment="Left" Height="60" Margin="0" VerticalAlignment="Top" Width="204" Visible="{Binding Cocfp1}"/>
+                                        </dxga:LinearScale.CustomElements>
+                                        <dxga:LinearScale.Markers>
+                                            <dxga:LinearScaleMarker IsInteractive="True" Value="{Binding Ocfp1}" Visible="{Binding Mocfp1}">
+                                                <dxga:LinearScaleMarker.Animation>
+                                                    <dxga:IndicatorAnimation/>
+                                                </dxga:LinearScaleMarker.Animation>
+                                                <dxga:LinearScaleMarker.Options>
+                                                    <dxga:LinearScaleMarkerOptions FactorHeight="2" FactorWidth="2" Offset="-9"/>
+                                                </dxga:LinearScaleMarker.Options>
+                                                <dxga:LinearScaleMarker.Presentation>
+                                                    <dxga:ProgressiveLinearScaleMarkerPresentation Fill="Black"/>
+                                                </dxga:LinearScaleMarker.Presentation>
+                                            </dxga:LinearScaleMarker>
+                                        </dxga:LinearScale.Markers>
+                                        <dxga:LinearScale.MinorTickmarkOptions>
+                                            <dxga:MinorTickmarkOptions/>
+                                        </dxga:LinearScale.MinorTickmarkOptions>
+                                        <dxga:LinearScale.TickmarksPresentation>
+                                            <dxga:DefaultTickmarksPresentation MinorTickBrush="White" MajorTickBrush="White"/>
+                                        </dxga:LinearScale.TickmarksPresentation>
+                                        <dxga:LinearScale.MajorTickmarkOptions>
+                                            <dxga:MajorTickmarkOptions FactorLength="2" Offset="-15"/>
+                                        </dxga:LinearScale.MajorTickmarkOptions>
+                                        <dxga:LinearScale.LinePresentation>
+                                            <dxga:DefaultLinearScaleLinePresentation Fill="White"/>
+                                        </dxga:LinearScale.LinePresentation>
+                                        <dxga:LinearScale.LineOptions>
+                                            <dxga:ScaleLineOptions/>
+                                        </dxga:LinearScale.LineOptions>
+                                        <dxga:LinearScale.LabelOptions>
+                                            <dxga:LinearScaleLabelOptions/>
+                                        </dxga:LinearScale.LabelOptions>
+                                        <dxga:LinearScale.LabelPresentation>
+                                            <dxga:DefaultScaleLabelPresentation/>
+                                        </dxga:LinearScale.LabelPresentation>
+                                        <dxga:LinearScale.CustomLabels>
+                                            <dxga:ScaleCustomLabel Content="CLS" Foreground="White" Margin="-12,-60,0,0" Visibility="{Binding L0ocfp1}"/>
+                                            <dxga:ScaleCustomLabel Content="OPN" Foreground="White" Margin="-12,-60,0,0" Value="10" Visibility="{Binding L1ocfp1}"/>
+                                        </dxga:LinearScale.CustomLabels>
+                                    </dxga:LinearScale>
+                                </dxga:LinearGaugeControl.Scales>
+                            </dxga:LinearGaugeControl>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <!-- //////////////////////////////EOQ W1////////////////////////////// -->
+                            <Border BorderBrush="{Binding Eoqw1}" BorderThickness="2" HorizontalAlignment="Center" Height="24" Margin="0,0,0,0" VerticalAlignment="Center" Width="174">
+                                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Text="{Binding Teoqw1}" Foreground="{Binding Feoqw1}"/>
+                            </Border>
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <!-- //////////////////////////////EOQ P1////////////////////////////// -->
+                            <Border Name="eoqpc1" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Center" Height="24" Margin="0,0,0,0" VerticalAlignment="Top" Width="174">
+                                <TextBlock Name="eoqpt1" TextAlignment="Center" TextWrapping="Wrap" Text="PRP" Foreground="Black"/>
+                            </Border>
+                            <Border Margin="0,0,0,0" BorderThickness="5" BorderBrush="White" VerticalAlignment="Bottom"/>
+                        </Grid>
+                    </Grid>
+                    <Border Margin="0,0,0,0" BorderThickness="5" BorderBrush="White" VerticalAlignment="Bottom"/>
+                    <Grid Grid.Column="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <!-- //////////////////////////////EOQ 2////////////////////////////// -->
+                        <Grid Grid.Row="0" HorizontalAlignment="Center" Height="60" Margin="0,0,0,0" VerticalAlignment="Center" Width="204">
+                            <Border BorderThickness="2" BorderBrush="{Binding Ceoq2}">
+                                <dxga:LinearGaugeControl>
+                                    <dxga:LinearGaugeControl.Scales>
+                                        <dxga:LinearScale EndValue="19" HorizontalAlignment="Left" Height="100" LayoutMode="LeftToRight" Margin="-43,20,0,0" MajorIntervalCount="1" MinorIntervalCount="1" Width="200" ShowMinorTickmarks="False" ShowLabels="False" ShowLine="False" ShowMajorTickmarks="False">
+                                            <dxga:LinearScale.Markers>
+                                                <dxga:LinearScaleMarker Value="4">
+                                                    <dxga:LinearScaleMarker.Options>
+                                                        <dxga:LinearScaleMarkerOptions FactorHeight="5" Offset="-34"/>
+                                                    </dxga:LinearScaleMarker.Options>
+                                                    <dxga:LinearScaleMarker.Presentation>
+                                                        <dxga:MagicLightLinearScaleMarkerPresentation Fill="Red"/>
+                                                    </dxga:LinearScaleMarker.Presentation>
+                                                </dxga:LinearScaleMarker>
+                                            </dxga:LinearScale.Markers>
+                                            <dxga:LinearScale.RangeBars>
+                                                <dxga:LinearScaleRangeBar AnchorValue="{Binding Veoq2}" IsInteractive="True">
+                                                    <dxga:LinearScaleRangeBar.Animation>
+                                                        <dxga:IndicatorAnimation/>
+                                                    </dxga:LinearScaleRangeBar.Animation>
+                                                    <dxga:LinearScaleRangeBar.Options>
+                                                        <dxga:LinearScaleRangeBarOptions Offset="-34" Thickness="52"/>
+                                                    </dxga:LinearScaleRangeBar.Options>
+                                                    <dxga:LinearScaleRangeBar.Presentation>
+                                                        <dxga:DefaultLinearScaleRangeBarPresentation Fill="#FF7EB2C1"/>
+                                                    </dxga:LinearScaleRangeBar.Presentation>
+                                                </dxga:LinearScaleRangeBar>
+                                            </dxga:LinearScale.RangeBars>
+                                        </dxga:LinearScale>
+                                    </dxga:LinearGaugeControl.Scales>
+                                </dxga:LinearGaugeControl>
+                            </Border>
+                            <TextBlock HorizontalAlignment="Left" Margin="98,10,0,0" TextWrapping="Wrap" Text="{Binding Eoq2}" VerticalAlignment="Top" Height="37" Foreground="{Binding Feoq2}" FontSize="30" Background="{Binding Beoq2}"/>
+                        </Grid>
+                        <!-- //////////////////////////////OCFP 2////////////////////////////// -->
+                        <Grid Grid.Row="1" HorizontalAlignment="Center" Height="60" Margin="0,0,0,0" VerticalAlignment="Center" Width="204">
+                            <dxga:LinearGaugeControl>
+                                <dxga:LinearGaugeControl.Scales>
+                                    <dxga:LinearScale HorizontalAlignment="Center" Height="100" LayoutMode="LeftToRight" Margin="0,12,0,0" VerticalAlignment="Center" Width="200" EndValue="10" MajorIntervalCount="2" ShowLabels="False">
+                                        <dxga:LinearScale.CustomElements>
+                                            <dxga:ScaleCustomElement Background="Red" Content="FLAPS" Foreground="Black" FontSize="36" HorizontalAlignment="Left" Height="60" Margin="0" VerticalAlignment="Top" Width="204" Visible="{Binding Cocfp2}"/>
+                                        </dxga:LinearScale.CustomElements>
+                                        <dxga:LinearScale.Markers>
+                                            <dxga:LinearScaleMarker IsInteractive="True" Value="{Binding Ocfp2}" Visible="{Binding Mocfp2}">
+                                                <dxga:LinearScaleMarker.Animation>
+                                                    <dxga:IndicatorAnimation/>
+                                                </dxga:LinearScaleMarker.Animation>
+                                                <dxga:LinearScaleMarker.Options>
+                                                    <dxga:LinearScaleMarkerOptions FactorHeight="2" FactorWidth="2" Offset="-9"/>
+                                                </dxga:LinearScaleMarker.Options>
+                                                <dxga:LinearScaleMarker.Presentation>
+                                                    <dxga:ProgressiveLinearScaleMarkerPresentation Fill="Black"/>
+                                                </dxga:LinearScaleMarker.Presentation>
+                                            </dxga:LinearScaleMarker>
+                                        </dxga:LinearScale.Markers>
+                                        <dxga:LinearScale.MinorTickmarkOptions>
+                                            <dxga:MinorTickmarkOptions/>
+                                        </dxga:LinearScale.MinorTickmarkOptions>
+                                        <dxga:LinearScale.TickmarksPresentation>
+                                            <dxga:DefaultTickmarksPresentation MinorTickBrush="White" MajorTickBrush="White"/>
+                                        </dxga:LinearScale.TickmarksPresentation>
+                                        <dxga:LinearScale.MajorTickmarkOptions>
+                                            <dxga:MajorTickmarkOptions FactorLength="2" Offset="-15"/>
+                                        </dxga:LinearScale.MajorTickmarkOptions>
+                                        <dxga:LinearScale.LinePresentation>
+                                            <dxga:DefaultLinearScaleLinePresentation Fill="White"/>
+                                        </dxga:LinearScale.LinePresentation>
+                                        <dxga:LinearScale.LineOptions>
+                                            <dxga:ScaleLineOptions/>
+                                        </dxga:LinearScale.LineOptions>
+                                        <dxga:LinearScale.LabelOptions>
+                                            <dxga:LinearScaleLabelOptions/>
+                                        </dxga:LinearScale.LabelOptions>
+                                        <dxga:LinearScale.LabelPresentation>
+                                            <dxga:DefaultScaleLabelPresentation/>
+                                        </dxga:LinearScale.LabelPresentation>
+                                        <dxga:LinearScale.CustomLabels>
+                                            <dxga:ScaleCustomLabel Content="CLS" Foreground="White" Margin="-12,-60,0,0" Visibility="{Binding L0ocfp2}"/>
+                                            <dxga:ScaleCustomLabel Content="OPN" Foreground="White" Margin="-12,-60,0,0" Value="10" Visibility="{Binding L1ocfp2}"/>
+                                        </dxga:LinearScale.CustomLabels>
+                                    </dxga:LinearScale>
+                                </dxga:LinearGaugeControl.Scales>
+                            </dxga:LinearGaugeControl>
+                        </Grid>
+                        <Border Grid.Row="1" Margin="0,0,0,0" BorderThickness="5" BorderBrush="White" VerticalAlignment="Bottom"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- //////////////////////////////OIL TEMP 3////////////////////////////// -->
+                    <Border Grid.Column="0" Margin="0,0,0,0" BorderThickness="2" BorderBrush="{Binding Ceot3}" HorizontalAlignment="Right" VerticalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Eot3}" VerticalAlignment="Center" Height="39" Width="80" Foreground="{Binding Feot3}" FontSize="25" FontFamily="Source Code Pro Black" Background="{Binding Beot3}"/>
+                    </Border>
+                    <!-- //////////////////////////////OIL COOLER 2////////////////////////////// -->
+                    <Border Grid.Column="1" Name="oilcoolc2" Margin="0,0,0,0" BorderThickness="2" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Name="oilcool2" HorizontalAlignment="Center" Margin="5" TextWrapping="Wrap" Text="AUG" VerticalAlignment="Center" Height="39" Width="230" Foreground="Black" FontSize="25" FontFamily="Source Code Pro Black"/>
+                    </Border>
+                    <!-- //////////////////////////////OIL TEMP 4////////////////////////////// -->
+                    <Border Grid.Column="2" Margin="0,0,0,0" BorderThickness="2" BorderBrush="{Binding Ceot4}" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Eot4}" VerticalAlignment="Center" Height="39" Width="80" Foreground="{Binding Feot4}" FontSize="25" FontFamily="Source Code Pro Black" Background="{Binding Beot4}"/>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- //////////////////////////////EOP 3////////////////////////////// -->
+                    <Border Grid.Column="0" Margin="0,0,0,0" BorderThickness="2" BorderBrush="{Binding Ceop3}" HorizontalAlignment="Right" VerticalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Eop3}" VerticalAlignment="Center" Height="34" Width="65" Foreground="{Binding Feop3}" FontSize="25" FontFamily="Source Code Pro Black" Background="{Binding Beop3}"/>
+                    </Border>
+                    <!-- //////////////////////////////GBOP 3////////////////////////////// -->
+                    <Border Grid.Column="1" Margin="0,0,0,0" BorderThickness="2" BorderBrush="{Binding Cgbop3}" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Gbop3}" VerticalAlignment="Center" Height="34" Width="65" Foreground="{Binding Fgbop3}" FontSize="25" FontFamily="Source Code Pro Black" Background="{Binding Bgbop3}"/>
+                    </Border>
+                    <!-- //////////////////////////////EOP 4////////////////////////////// -->
+                    <Border Grid.Column="3" Margin="0,0,0,0" BorderThickness="2" BorderBrush="{Binding Ceop4}" HorizontalAlignment="Right" VerticalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Eop4}" VerticalAlignment="Center" Height="34" Width="65" Foreground="{Binding Feop4}" FontSize="25" FontFamily="Source Code Pro Black" Background="{Binding Beop4}"/>
+                    </Border>
+                    <!-- //////////////////////////////GBOP 4////////////////////////////// -->
+                    <Border Grid.Column="4" Margin="0,0,0,0" BorderThickness="2" BorderBrush="{Binding Cgbop4}" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Gbop4}" VerticalAlignment="Center" Height="34" Width="65" Foreground="{Binding Fgbop4}" FontSize="25" FontFamily="Source Code Pro Black" Background="{Binding Bgbop4}"/>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- //////////////////////////////EOP 3////////////////////////////// -->
+                    <Grid Grid.Column="0" HorizontalAlignment="Right" Height="148" Margin="0,0,0,0" VerticalAlignment="Center" Width="130">
+                        <TextBox Background="Black" HorizontalAlignment="Left" Height="22" Margin="94,40,0,0" TextWrapping="Wrap" Text="ENG" VerticalAlignment="Top" Width="36" BorderBrush="Black" FontFamily="Segoe UI Black" CaretBrush="Black" Foreground="White"/>
+                        <Border Margin="90,24,0,106" BorderThickness="2" BorderBrush="{Binding Celp3}">
+                            <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Text="ELP" VerticalAlignment="Center" Height="16" Width="36" Foreground="{Binding Felp3}" FontSize="15" FontFamily="Source Code Pro Black" Margin="0,-2,0,0"/>
+                        </Border>
+                        <dxga:CircularGaugeControl >
+                            <dxga:CircularGaugeControl.Scales >
+                                <dxga:ArcScale EndAngle="240" EndValue="120" Foreground="White" Height="220" Margin="130,0,0,0" MajorIntervalCount="2" MinorIntervalCount="1" ShowSpindleCap="False" ShowMinorTickmarks="False" ShowLabels="False" ShowLine="True" ShowMajorTickmarks="True" StartAngle="120" UseLayoutRounding="False" Width="220">
+                                    <dxga:ArcScale.RangeBars>
+                                        <dxga:ArcScaleRangeBar AnchorValue="{Binding B1eop3}" IsInteractive="True">
+                                            <dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleRangeBar.Animation>
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-32" Thickness="8"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                        <dxga:ArcScaleRangeBar AnchorValue="{Binding B2eop3}" IsInteractive="True">
+                                            <dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleRangeBar.Animation>
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-32" Thickness="8"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Red"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                    </dxga:ArcScale.RangeBars>
+                                    <dxga:ArcScale.Markers>
+                                        <dxga:ArcScaleMarker Value="98">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="94">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="26">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="22">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                    </dxga:ArcScale.Markers>
+                                    <dxga:ArcScale.LabelOptions>
+                                        <dxga:ArcScaleLabelOptions ShowLast="False" ShowFirst="False"/>
+                                    </dxga:ArcScale.LabelOptions>
+                                    <dxga:ArcScale.LinePresentation>
+                                        <dxga:CleanWhiteArcScaleLinePresentation Fill="White"/>
+                                    </dxga:ArcScale.LinePresentation>
+                                    <dxga:ArcScale.LabelPresentation>
+                                        <dxga:CleanWhiteScaleLabelPresentation/>
+                                    </dxga:ArcScale.LabelPresentation>
+                                    <dxga:ArcScale.LineOptions>
+                                        <dxga:ScaleLineOptions Thickness="2"/>
+                                    </dxga:ArcScale.LineOptions>
+                                    <dxga:ArcScale.MajorTickmarkOptions>
+                                        <dxga:MajorTickmarkOptions/>
+                                    </dxga:ArcScale.MajorTickmarkOptions>
+                                    <dxga:ArcScale.Needles>
+                                        <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding Aeop3}">
+                                            <dxga:ArcScaleNeedle.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleNeedle.Animation>
+                                            <dxga:ArcScaleNeedle.Presentation>
+                                                <dxga:YellowSubmarineArcScaleNeedlePresentation Fill="White"/>
+                                            </dxga:ArcScaleNeedle.Presentation>
+                                        </dxga:ArcScaleNeedle>
+                                    </dxga:ArcScale.Needles>
+                                    <dxga:ArcScale.Ranges>
+                                        <dxga:ArcScaleRange EndValue="80%" StartValue="20%">
+                                            <dxga:ArcScaleRange.Presentation>
+                                                <dxga:DefaultArcScaleRangePresentation Fill="#FF00FF23"/>
+                                            </dxga:ArcScaleRange.Presentation>
+                                            <dxga:ArcScaleRange.Options>
+                                                <dxga:RangeOptions Offset="-27" Thickness="6"/>
+                                            </dxga:ArcScaleRange.Options>
+                                        </dxga:ArcScaleRange>
+                                    </dxga:ArcScale.Ranges>
+                                    <dxga:ArcScale.SpindleCapOptions>
+                                        <dxga:SpindleCapOptions/>
+                                    </dxga:ArcScale.SpindleCapOptions>
+                                    <dxga:ArcScale.TickmarksPresentation>
+                                        <dxga:DefaultTickmarksPresentation MajorTickBrush="White"/>
+                                    </dxga:ArcScale.TickmarksPresentation>
+                                </dxga:ArcScale>
+                            </dxga:CircularGaugeControl.Scales>
+                        </dxga:CircularGaugeControl>
+                    </Grid>
+                    <!-- //////////////////////////////GBOP 3////////////////////////////// -->
+                    <Grid Grid.Column="1" HorizontalAlignment="Left" Height="148" Margin="0,0,0,0" VerticalAlignment="Center" Width="130">
+                        <TextBox Background="Black" HorizontalAlignment="Left" Height="22" Margin="0,39,0,0" TextWrapping="Wrap" Text="GB" VerticalAlignment="Top" Width="28" BorderBrush="Black" FontFamily="Segoe UI Black" CaretBrush="Black" Foreground="White"/>
+                        <dxga:CircularGaugeControl>
+                            <dxga:CircularGaugeControl.Scales>
+                                <dxga:ArcScale EndAngle="-60" EndValue="300" MajorIntervalCount="2" MinorIntervalCount="1" StartAngle="60" StartValue="0" Foreground="White" Height="220" Margin="-130,0,0,0" ShowSpindleCap="False" ShowMinorTickmarks="False" ShowLabels="False" ShowLine="True" ShowMajorTickmarks="True" UseLayoutRounding="False" Width="220">
+                                    <dxga:ArcScale.RangeBars>
+                                        <dxga:ArcScaleRangeBar AnchorValue="{Binding B1gbop3}" IsInteractive="True">
+                                            <dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleRangeBar.Animation>
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-32" Thickness="8"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                        <dxga:ArcScaleRangeBar AnchorValue="{Binding B2gbop3}" IsInteractive="True">
+                                            <dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleRangeBar.Animation>
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-32" Thickness="8"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Red"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                    </dxga:ArcScale.RangeBars>
+                                    <dxga:ArcScale.Markers>
+                                        <dxga:ArcScaleMarker Value="245">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="235">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="65">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="55">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                    </dxga:ArcScale.Markers>
+                                    <dxga:ArcScale.LabelOptions>
+                                        <dxga:ArcScaleLabelOptions ShowLast="False" ShowFirst="False"/>
+                                    </dxga:ArcScale.LabelOptions>
+                                    <dxga:ArcScale.LinePresentation>
+                                        <dxga:CleanWhiteArcScaleLinePresentation Fill="White"/>
+                                    </dxga:ArcScale.LinePresentation>
+                                    <dxga:ArcScale.LabelPresentation>
+                                        <dxga:CleanWhiteScaleLabelPresentation/>
+                                    </dxga:ArcScale.LabelPresentation>
+                                    <dxga:ArcScale.LineOptions>
+                                        <dxga:ScaleLineOptions Thickness="2"/>
+                                    </dxga:ArcScale.LineOptions>
+                                    <dxga:ArcScale.MajorTickmarkOptions>
+                                        <dxga:MajorTickmarkOptions/>
+                                    </dxga:ArcScale.MajorTickmarkOptions>
+                                    <dxga:ArcScale.Needles>
+                                        <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding Agbop3}">
+                                            <dxga:ArcScaleNeedle.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleNeedle.Animation>
+                                            <dxga:ArcScaleNeedle.Presentation>
+                                                <dxga:YellowSubmarineArcScaleNeedlePresentation Fill="White"/>
+                                            </dxga:ArcScaleNeedle.Presentation>
+                                        </dxga:ArcScaleNeedle>
+                                    </dxga:ArcScale.Needles>
+                                    <dxga:ArcScale.Ranges>
+                                        <dxga:ArcScaleRange EndValue="80%" StartValue="20%">
+                                            <dxga:ArcScaleRange.Presentation>
+                                                <dxga:DefaultArcScaleRangePresentation Fill="#FF00FF23"/>
+                                            </dxga:ArcScaleRange.Presentation>
+                                            <dxga:ArcScaleRange.Options>
+                                                <dxga:RangeOptions Offset="-27" Thickness="6"/>
+                                            </dxga:ArcScaleRange.Options>
+                                        </dxga:ArcScaleRange>
+                                    </dxga:ArcScale.Ranges>
+                                    <dxga:ArcScale.SpindleCapOptions>
+                                        <dxga:SpindleCapOptions/>
+                                    </dxga:ArcScale.SpindleCapOptions>
+                                    <dxga:ArcScale.TickmarksPresentation>
+                                        <dxga:DefaultTickmarksPresentation MajorTickBrush="White"/>
+                                    </dxga:ArcScale.TickmarksPresentation>
+                                </dxga:ArcScale>
+                            </dxga:CircularGaugeControl.Scales>
+                        </dxga:CircularGaugeControl>
+                    </Grid>
+                    <!-- //////////////////////////////EOP 4////////////////////////////// -->
+                    <Grid Grid.Column="3" HorizontalAlignment="Right" Height="148" Margin="0,0,0,0" VerticalAlignment="Center" Width="130">
+                        <TextBox Background="Black" HorizontalAlignment="Left" Height="22" Margin="94,40,0,0" TextWrapping="Wrap" Text="ENG" VerticalAlignment="Top" Width="36" BorderBrush="Black" FontFamily="Segoe UI Black" CaretBrush="Black" Foreground="White"/>
+                        <Border Margin="90,24,0,106" BorderThickness="2" BorderBrush="{Binding Celp4}">
+                            <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Text="ELP" VerticalAlignment="Center" Height="16" Width="36" Foreground="{Binding Felp4}" FontSize="15" FontFamily="Source Code Pro Black" Margin="0,-2,0,0"/>
+                        </Border>
+                        <dxga:CircularGaugeControl >
+                            <dxga:CircularGaugeControl.Scales >
+                                <dxga:ArcScale EndAngle="240" EndValue="120" Foreground="White" Height="220" Margin="130,0,0,0" MajorIntervalCount="2" MinorIntervalCount="1" ShowSpindleCap="False" ShowMinorTickmarks="False" ShowLabels="False" ShowLine="True" ShowMajorTickmarks="True" StartAngle="120" UseLayoutRounding="False" Width="220">
+                                    <dxga:ArcScale.RangeBars>
+                                        <dxga:ArcScaleRangeBar AnchorValue="{Binding B1eop4}" IsInteractive="True">
+                                            <dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleRangeBar.Animation>
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-32" Thickness="8"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                        <dxga:ArcScaleRangeBar AnchorValue="{Binding B2eop4}" IsInteractive="True">
+                                            <dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleRangeBar.Animation>
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-32" Thickness="8"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Red"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                    </dxga:ArcScale.RangeBars>
+                                    <dxga:ArcScale.Markers>
+                                        <dxga:ArcScaleMarker Value="98">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="94">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="26">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="22">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                    </dxga:ArcScale.Markers>
+                                    <dxga:ArcScale.LabelOptions>
+                                        <dxga:ArcScaleLabelOptions ShowLast="False" ShowFirst="False"/>
+                                    </dxga:ArcScale.LabelOptions>
+                                    <dxga:ArcScale.LinePresentation>
+                                        <dxga:CleanWhiteArcScaleLinePresentation Fill="White"/>
+                                    </dxga:ArcScale.LinePresentation>
+                                    <dxga:ArcScale.LabelPresentation>
+                                        <dxga:CleanWhiteScaleLabelPresentation/>
+                                    </dxga:ArcScale.LabelPresentation>
+                                    <dxga:ArcScale.LineOptions>
+                                        <dxga:ScaleLineOptions Thickness="2"/>
+                                    </dxga:ArcScale.LineOptions>
+                                    <dxga:ArcScale.MajorTickmarkOptions>
+                                        <dxga:MajorTickmarkOptions/>
+                                    </dxga:ArcScale.MajorTickmarkOptions>
+                                    <dxga:ArcScale.Needles>
+                                        <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding Aeop4}">
+                                            <dxga:ArcScaleNeedle.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleNeedle.Animation>
+                                            <dxga:ArcScaleNeedle.Presentation>
+                                                <dxga:YellowSubmarineArcScaleNeedlePresentation Fill="White"/>
+                                            </dxga:ArcScaleNeedle.Presentation>
+                                        </dxga:ArcScaleNeedle>
+                                    </dxga:ArcScale.Needles>
+                                    <dxga:ArcScale.Ranges>
+                                        <dxga:ArcScaleRange EndValue="80%" StartValue="20%">
+                                            <dxga:ArcScaleRange.Presentation>
+                                                <dxga:DefaultArcScaleRangePresentation Fill="#FF00FF23"/>
+                                            </dxga:ArcScaleRange.Presentation>
+                                            <dxga:ArcScaleRange.Options>
+                                                <dxga:RangeOptions Offset="-27" Thickness="6"/>
+                                            </dxga:ArcScaleRange.Options>
+                                        </dxga:ArcScaleRange>
+                                    </dxga:ArcScale.Ranges>
+                                    <dxga:ArcScale.SpindleCapOptions>
+                                        <dxga:SpindleCapOptions/>
+                                    </dxga:ArcScale.SpindleCapOptions>
+                                    <dxga:ArcScale.TickmarksPresentation>
+                                        <dxga:DefaultTickmarksPresentation MajorTickBrush="White"/>
+                                    </dxga:ArcScale.TickmarksPresentation>
+                                </dxga:ArcScale>
+                            </dxga:CircularGaugeControl.Scales>
+                        </dxga:CircularGaugeControl>
+                    </Grid>
+                    <!-- //////////////////////////////GBOP 4////////////////////////////// -->
+                    <Grid Grid.Column="4" HorizontalAlignment="Left" Height="148" Margin="0,0,0,0" VerticalAlignment="Center" Width="130">
+                        <TextBox Background="Black" HorizontalAlignment="Left" Height="22" Margin="0,39,0,0" TextWrapping="Wrap" Text="GB" VerticalAlignment="Top" Width="28" BorderBrush="Black" FontFamily="Segoe UI Black" CaretBrush="Black" Foreground="White"/>
+                        <dxga:CircularGaugeControl>
+                            <dxga:CircularGaugeControl.Scales>
+                                <dxga:ArcScale EndAngle="-60" EndValue="300" MajorIntervalCount="2" MinorIntervalCount="1" StartAngle="60" StartValue="0" Foreground="White" Height="220" Margin="-130,0,0,0" ShowSpindleCap="False" ShowMinorTickmarks="False" ShowLabels="False" ShowLine="True" ShowMajorTickmarks="True" UseLayoutRounding="False" Width="220">
+                                    <dxga:ArcScale.RangeBars>
+                                        <dxga:ArcScaleRangeBar AnchorValue="{Binding B1gbop4}" IsInteractive="True">
+                                            <dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleRangeBar.Animation>
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-32" Thickness="8"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                        <dxga:ArcScaleRangeBar AnchorValue="{Binding B2gbop4}" IsInteractive="True">
+                                            <dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleRangeBar.Animation>
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-32" Thickness="8"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Red"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                    </dxga:ArcScale.RangeBars>
+                                    <dxga:ArcScale.Markers>
+                                        <dxga:ArcScaleMarker Value="245">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="235">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="65">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Yellow"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                        <dxga:ArcScaleMarker Value="55">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-30"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                    </dxga:ArcScale.Markers>
+                                    <dxga:ArcScale.LabelOptions>
+                                        <dxga:ArcScaleLabelOptions ShowLast="False" ShowFirst="False"/>
+                                    </dxga:ArcScale.LabelOptions>
+                                    <dxga:ArcScale.LinePresentation>
+                                        <dxga:CleanWhiteArcScaleLinePresentation Fill="White"/>
+                                    </dxga:ArcScale.LinePresentation>
+                                    <dxga:ArcScale.LabelPresentation>
+                                        <dxga:CleanWhiteScaleLabelPresentation/>
+                                    </dxga:ArcScale.LabelPresentation>
+                                    <dxga:ArcScale.LineOptions>
+                                        <dxga:ScaleLineOptions Thickness="2"/>
+                                    </dxga:ArcScale.LineOptions>
+                                    <dxga:ArcScale.MajorTickmarkOptions>
+                                        <dxga:MajorTickmarkOptions/>
+                                    </dxga:ArcScale.MajorTickmarkOptions>
+                                    <dxga:ArcScale.Needles>
+                                        <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding Agbop4}">
+                                            <dxga:ArcScaleNeedle.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleNeedle.Animation>
+                                            <dxga:ArcScaleNeedle.Presentation>
+                                                <dxga:YellowSubmarineArcScaleNeedlePresentation Fill="White"/>
+                                            </dxga:ArcScaleNeedle.Presentation>
+                                        </dxga:ArcScaleNeedle>
+                                    </dxga:ArcScale.Needles>
+                                    <dxga:ArcScale.Ranges>
+                                        <dxga:ArcScaleRange EndValue="80%" StartValue="20%">
+                                            <dxga:ArcScaleRange.Presentation>
+                                                <dxga:DefaultArcScaleRangePresentation Fill="#FF00FF23"/>
+                                            </dxga:ArcScaleRange.Presentation>
+                                            <dxga:ArcScaleRange.Options>
+                                                <dxga:RangeOptions Offset="-27" Thickness="6"/>
+                                            </dxga:ArcScaleRange.Options>
+                                        </dxga:ArcScaleRange>
+                                    </dxga:ArcScale.Ranges>
+                                    <dxga:ArcScale.SpindleCapOptions>
+                                        <dxga:SpindleCapOptions/>
+                                    </dxga:ArcScale.SpindleCapOptions>
+                                    <dxga:ArcScale.TickmarksPresentation>
+                                        <dxga:DefaultTickmarksPresentation MajorTickBrush="White"/>
+                                    </dxga:ArcScale.TickmarksPresentation>
+                                </dxga:ArcScale>
+                            </dxga:CircularGaugeControl.Scales>
+                        </dxga:CircularGaugeControl>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <!-- //////////////////////////////EOQ 3////////////////////////////// -->
+                        <Grid Grid.Row="0" HorizontalAlignment="Center" Height="60" Margin="0,0,0,0" VerticalAlignment="Center" Width="204">
+                            <Border BorderThickness="2" BorderBrush="{Binding Ceoq3}">
+                                <dxga:LinearGaugeControl >
+                                    <dxga:LinearGaugeControl.Scales>
+                                        <dxga:LinearScale EndValue="19" HorizontalAlignment="Left" Height="100" LayoutMode="LeftToRight" Margin="-43,20,0,0" MajorIntervalCount="1" MinorIntervalCount="1" Width="200" ShowMinorTickmarks="False" ShowLabels="False" ShowLine="False" ShowMajorTickmarks="False">
+                                            <dxga:LinearScale.Markers>
+                                                <dxga:LinearScaleMarker Value="4">
+                                                    <dxga:LinearScaleMarker.Options>
+                                                        <dxga:LinearScaleMarkerOptions FactorHeight="5" Offset="-34"/>
+                                                    </dxga:LinearScaleMarker.Options>
+                                                    <dxga:LinearScaleMarker.Presentation>
+                                                        <dxga:MagicLightLinearScaleMarkerPresentation Fill="Red"/>
+                                                    </dxga:LinearScaleMarker.Presentation>
+                                                </dxga:LinearScaleMarker>
+                                            </dxga:LinearScale.Markers>
+                                            <dxga:LinearScale.RangeBars>
+                                                <dxga:LinearScaleRangeBar AnchorValue="{Binding Veoq3}" IsInteractive="True">
+                                                    <dxga:LinearScaleRangeBar.Animation>
+                                                        <dxga:IndicatorAnimation/>
+                                                    </dxga:LinearScaleRangeBar.Animation>
+                                                    <dxga:LinearScaleRangeBar.Options>
+                                                        <dxga:LinearScaleRangeBarOptions Offset="-34" Thickness="52"/>
+                                                    </dxga:LinearScaleRangeBar.Options>
+                                                    <dxga:LinearScaleRangeBar.Presentation>
+                                                        <dxga:DefaultLinearScaleRangeBarPresentation Fill="#FF7EB2C1"/>
+                                                    </dxga:LinearScaleRangeBar.Presentation>
+                                                </dxga:LinearScaleRangeBar>
+                                            </dxga:LinearScale.RangeBars>
+                                        </dxga:LinearScale>
+                                    </dxga:LinearGaugeControl.Scales>
+                                </dxga:LinearGaugeControl>
+                            </Border>
+                            <TextBlock HorizontalAlignment="Left" Margin="98,10,0,0" TextWrapping="Wrap" Text="{Binding Eoq3}" VerticalAlignment="Top" Height="37" Foreground="{Binding Feoq3}" FontSize="30" Background="{Binding Beoq3}"/>
+                        </Grid>
+                        <!-- //////////////////////////////OCFP 3////////////////////////////// -->
+                        <Grid Grid.Row="1" HorizontalAlignment="Center" Height="60" Margin="0,0,0,0" VerticalAlignment="Center" Width="204">
+                            <dxga:LinearGaugeControl>
+                                <dxga:LinearGaugeControl.Scales>
+                                    <dxga:LinearScale HorizontalAlignment="Center" Height="100" LayoutMode="LeftToRight" Margin="0,12,0,0" VerticalAlignment="Center" Width="200" EndValue="10" MajorIntervalCount="2" ShowLabels="False">
+                                        <dxga:LinearScale.CustomElements>
+                                            <dxga:ScaleCustomElement Background="Red" Content="FLAPS" Foreground="Black" FontSize="36" HorizontalAlignment="Left" Height="60" Margin="0" VerticalAlignment="Top" Width="204" Visible="{Binding Cocfp3}"/>
+                                        </dxga:LinearScale.CustomElements>
+                                        <dxga:LinearScale.Markers>
+                                            <dxga:LinearScaleMarker IsInteractive="True" Value="{Binding Ocfp3}" Visible="{Binding Mocfp3}">
+                                                <dxga:LinearScaleMarker.Animation>
+                                                    <dxga:IndicatorAnimation/>
+                                                </dxga:LinearScaleMarker.Animation>
+                                                <dxga:LinearScaleMarker.Options>
+                                                    <dxga:LinearScaleMarkerOptions FactorHeight="2" FactorWidth="2" Offset="-9"/>
+                                                </dxga:LinearScaleMarker.Options>
+                                                <dxga:LinearScaleMarker.Presentation>
+                                                    <dxga:ProgressiveLinearScaleMarkerPresentation Fill="Black"/>
+                                                </dxga:LinearScaleMarker.Presentation>
+                                            </dxga:LinearScaleMarker>
+                                        </dxga:LinearScale.Markers>
+                                        <dxga:LinearScale.MinorTickmarkOptions>
+                                            <dxga:MinorTickmarkOptions/>
+                                        </dxga:LinearScale.MinorTickmarkOptions>
+                                        <dxga:LinearScale.TickmarksPresentation>
+                                            <dxga:DefaultTickmarksPresentation MinorTickBrush="White" MajorTickBrush="White"/>
+                                        </dxga:LinearScale.TickmarksPresentation>
+                                        <dxga:LinearScale.MajorTickmarkOptions>
+                                            <dxga:MajorTickmarkOptions FactorLength="2" Offset="-15"/>
+                                        </dxga:LinearScale.MajorTickmarkOptions>
+                                        <dxga:LinearScale.LinePresentation>
+                                            <dxga:DefaultLinearScaleLinePresentation Fill="White"/>
+                                        </dxga:LinearScale.LinePresentation>
+                                        <dxga:LinearScale.LineOptions>
+                                            <dxga:ScaleLineOptions/>
+                                        </dxga:LinearScale.LineOptions>
+                                        <dxga:LinearScale.LabelOptions>
+                                            <dxga:LinearScaleLabelOptions/>
+                                        </dxga:LinearScale.LabelOptions>
+                                        <dxga:LinearScale.LabelPresentation>
+                                            <dxga:DefaultScaleLabelPresentation/>
+                                        </dxga:LinearScale.LabelPresentation>
+                                        <dxga:LinearScale.CustomLabels>
+                                            <dxga:ScaleCustomLabel Content="CLS" Foreground="White" Margin="-12,-60,0,0" Visibility="{Binding L0ocfp3}"/>
+                                            <dxga:ScaleCustomLabel Content="OPN" Foreground="White" Margin="-12,-60,0,0" Value="10" Visibility="{Binding L1ocfp3}"/>
+                                        </dxga:LinearScale.CustomLabels>
+                                    </dxga:LinearScale>
+                                </dxga:LinearGaugeControl.Scales>
+                            </dxga:LinearGaugeControl>
+                        </Grid>
+                    </Grid>
+                    <Border Grid.Row="1" Margin="0,0,0,0" BorderThickness="5" BorderBrush="White" VerticalAlignment="Bottom"/>
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <!-- //////////////////////////////EOQ W2////////////////////////////// -->
+                            <Border BorderBrush="{Binding Eoqw2}" BorderThickness="2" HorizontalAlignment="Center" Height="24" Margin="0,0,0,0" VerticalAlignment="Center" Width="174">
+                                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Text="{Binding Teoqw2}" Foreground="{Binding Feoqw2}"/>
+                            </Border>
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <!-- //////////////////////////////EOQ P2////////////////////////////// -->
+                            <Border Name="eoqpc2" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Center" Height="24" Margin="0,0,0,0" VerticalAlignment="Top" Width="174">
+                                <TextBlock Name="eoqpt2" TextAlignment="Center" TextWrapping="Wrap" Text="PRP" Foreground="Black"/>
+                            </Border>
+                        </Grid>
+                        <Border Grid.Row="1" Margin="0,0,0,0" BorderThickness="5" BorderBrush="White" VerticalAlignment="Bottom"/>
+                    </Grid>
+                    <Grid Grid.Column="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <!-- //////////////////////////////EOQ 4////////////////////////////// -->
+                        <Grid Grid.Row="0" HorizontalAlignment="Center" Height="60" Margin="0,0,0,0" VerticalAlignment="Center" Width="204">
+                            <Border BorderThickness="2" BorderBrush="{Binding Ceoq4}">
+                                <dxga:LinearGaugeControl>
+                                    <dxga:LinearGaugeControl.Scales>
+                                        <dxga:LinearScale EndValue="19" HorizontalAlignment="Left" Height="100" LayoutMode="LeftToRight" Margin="-43,20,0,0" MajorIntervalCount="1" MinorIntervalCount="1" Width="200" ShowMinorTickmarks="False" ShowLabels="False" ShowLine="False" ShowMajorTickmarks="False">
+                                            <dxga:LinearScale.Markers>
+                                                <dxga:LinearScaleMarker Value="4">
+                                                    <dxga:LinearScaleMarker.Options>
+                                                        <dxga:LinearScaleMarkerOptions FactorHeight="5" Offset="-34"/>
+                                                    </dxga:LinearScaleMarker.Options>
+                                                    <dxga:LinearScaleMarker.Presentation>
+                                                        <dxga:MagicLightLinearScaleMarkerPresentation Fill="Red"/>
+                                                    </dxga:LinearScaleMarker.Presentation>
+                                                </dxga:LinearScaleMarker>
+                                            </dxga:LinearScale.Markers>
+                                            <dxga:LinearScale.RangeBars>
+                                                <dxga:LinearScaleRangeBar AnchorValue="{Binding Veoq4}" IsInteractive="True">
+                                                    <dxga:LinearScaleRangeBar.Animation>
+                                                        <dxga:IndicatorAnimation/>
+                                                    </dxga:LinearScaleRangeBar.Animation>
+                                                    <dxga:LinearScaleRangeBar.Options>
+                                                        <dxga:LinearScaleRangeBarOptions Offset="-34" Thickness="52"/>
+                                                    </dxga:LinearScaleRangeBar.Options>
+                                                    <dxga:LinearScaleRangeBar.Presentation>
+                                                        <dxga:DefaultLinearScaleRangeBarPresentation Fill="#FF7EB2C1"/>
+                                                    </dxga:LinearScaleRangeBar.Presentation>
+                                                </dxga:LinearScaleRangeBar>
+                                            </dxga:LinearScale.RangeBars>
+                                        </dxga:LinearScale>
+                                    </dxga:LinearGaugeControl.Scales>
+                                </dxga:LinearGaugeControl>
+                            </Border>
+                            <TextBlock HorizontalAlignment="Left" Margin="98,10,0,0" TextWrapping="Wrap" Text="{Binding Eoq4}" VerticalAlignment="Top" Height="37" Foreground="{Binding Feoq4}" FontSize="30" Background="{Binding Beoq4}"/>
+                        </Grid>
+                        <!-- //////////////////////////////OCFP 4////////////////////////////// -->
+                        <Grid Grid.Row="1" HorizontalAlignment="Center" Height="60" Margin="0,0,0,0" VerticalAlignment="Center" Width="204">
+                            <dxga:LinearGaugeControl>
+                                <dxga:LinearGaugeControl.Scales>
+                                    <dxga:LinearScale HorizontalAlignment="Center" Height="100" LayoutMode="LeftToRight" Margin="0,12,0,0" VerticalAlignment="Center" Width="200" EndValue="10" MajorIntervalCount="2" ShowLabels="False">
+                                        <dxga:LinearScale.CustomElements>
+                                            <dxga:ScaleCustomElement Background="Red" Content="FLAPS" Foreground="Black" FontSize="36" HorizontalAlignment="Left" Height="60" Margin="0" VerticalAlignment="Top" Width="204" Visible="{Binding Cocfp4}"/>
+                                        </dxga:LinearScale.CustomElements>
+                                        <dxga:LinearScale.Markers>
+                                            <dxga:LinearScaleMarker IsInteractive="True" Value="{Binding Ocfp4}" Visible="{Binding Mocfp4}">
+                                                <dxga:LinearScaleMarker.Animation>
+                                                    <dxga:IndicatorAnimation/>
+                                                </dxga:LinearScaleMarker.Animation>
+                                                <dxga:LinearScaleMarker.Options>
+                                                    <dxga:LinearScaleMarkerOptions FactorHeight="2" FactorWidth="2" Offset="-9"/>
+                                                </dxga:LinearScaleMarker.Options>
+                                                <dxga:LinearScaleMarker.Presentation>
+                                                    <dxga:ProgressiveLinearScaleMarkerPresentation Fill="Black"/>
+                                                </dxga:LinearScaleMarker.Presentation>
+                                            </dxga:LinearScaleMarker>
+                                        </dxga:LinearScale.Markers>
+                                        <dxga:LinearScale.MinorTickmarkOptions>
+                                            <dxga:MinorTickmarkOptions/>
+                                        </dxga:LinearScale.MinorTickmarkOptions>
+                                        <dxga:LinearScale.TickmarksPresentation>
+                                            <dxga:DefaultTickmarksPresentation MinorTickBrush="White" MajorTickBrush="White"/>
+                                        </dxga:LinearScale.TickmarksPresentation>
+                                        <dxga:LinearScale.MajorTickmarkOptions>
+                                            <dxga:MajorTickmarkOptions FactorLength="2" Offset="-15"/>
+                                        </dxga:LinearScale.MajorTickmarkOptions>
+                                        <dxga:LinearScale.LinePresentation>
+                                            <dxga:DefaultLinearScaleLinePresentation Fill="White"/>
+                                        </dxga:LinearScale.LinePresentation>
+                                        <dxga:LinearScale.LineOptions>
+                                            <dxga:ScaleLineOptions/>
+                                        </dxga:LinearScale.LineOptions>
+                                        <dxga:LinearScale.LabelOptions>
+                                            <dxga:LinearScaleLabelOptions/>
+                                        </dxga:LinearScale.LabelOptions>
+                                        <dxga:LinearScale.LabelPresentation>
+                                            <dxga:DefaultScaleLabelPresentation/>
+                                        </dxga:LinearScale.LabelPresentation>
+                                        <dxga:LinearScale.CustomLabels>
+                                            <dxga:ScaleCustomLabel Content="CLS" Foreground="White" Margin="-12,-60,0,0" Visibility="{Binding L0ocfp4}"/>
+                                            <dxga:ScaleCustomLabel Content="OPN" Foreground="White" Margin="-12,-60,0,0" Value="10" Visibility="{Binding L1ocfp4}"/>
+                                        </dxga:LinearScale.CustomLabels>
+                                    </dxga:LinearScale>
+                                </dxga:LinearGaugeControl.Scales>
+                            </dxga:LinearGaugeControl>
+                        </Grid>
+                        <Border Grid.Row="1" Margin="0,0,0,0" BorderThickness="5" BorderBrush="White" VerticalAlignment="Bottom"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+        <!-- //////////////////////////////GRID 1////////////////////////////// -->
+
+        
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.4285714285714*"/>
+                <ColumnDefinition Width="3.333333333333333333*"/>
+            </Grid.ColumnDefinitions>
+            <!-- //////////////////////////////GRID 2////////////////////////////// -->
+        <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1.2*"/>
+                </Grid.RowDefinitions>
+                <!-- //////////////////////////////RUDDER////////////////////////////// -->
+                <Grid Grid.Row="0" HorizontalAlignment="Center" Height="200" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="200">
+                    <TextBlock HorizontalAlignment="Left" Margin="40,94,0,0" TextWrapping="Wrap" Text="RUDDER" Foreground="White" VerticalAlignment="Top" Height="34" Width="119" TextAlignment="Center" FontSize="25"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="40,170,0,0" TextWrapping="Wrap" Text="DEG" Foreground="White" VerticalAlignment="Top" Height="25" Width="119" TextAlignment="Center" FontSize="20"/>
+                    <dxga:CircularGaugeControl>
+                        <dxga:CircularGaugeControl.Scales>
+                            <dxga:ArcScale EndAngle="0" EndValue="25" Height="250" Margin="0,100,0,0" MajorIntervalCount="5" MinorIntervalCount="2" StartValue="-25" ShowLabels="False" ShowLine="True" StartAngle="-180" Width="250">
+                                <dxga:ArcScale.CustomLabels>
+                                    <dxga:ScaleCustomLabel Content="L" Foreground="White" FontSize="16" HorizontalAlignment="Center" Height="30" Margin="30,5,0,0" Value="-25" VerticalAlignment="Center" Width="30"/>
+                                    <dxga:ScaleCustomLabel Content="R" Foreground="White" FontSize="16" HorizontalAlignment="Center" Height="30" Margin="-50,5,0,0" Value="25" VerticalAlignment="Center" Width="30"/>
+                                    <dxga:ScaleCustomLabel Content="20" Foreground="White" FontSize="16" HorizontalAlignment="Center" Height="30" Margin="50,5,0,0" Value="-20" VerticalAlignment="Center" Width="30"/>
+                                    <dxga:ScaleCustomLabel Content="0" Foreground="White" FontSize="16" HorizontalAlignment="Center" Height="30" Margin="-5,50,0,0" VerticalAlignment="Center" Width="30"/>
+                                    <dxga:ScaleCustomLabel Content="20" Foreground="White" FontSize="16" HorizontalAlignment="Center" Height="30" Margin="-110,5,0,0" Value="20" VerticalAlignment="Center" Width="30"/>
+                                </dxga:ArcScale.CustomLabels>
+                                <dxga:ArcScale.LinePresentation>
+                                    <dxga:DefaultArcScaleLinePresentation Fill="White"/>
+                                </dxga:ArcScale.LinePresentation>
+                                <dxga:ArcScale.LineOptions>
+                                    <dxga:ScaleLineOptions Thickness="5"/>
+                                </dxga:ArcScale.LineOptions>
+                                <dxga:ArcScale.MajorTickmarkOptions>
+                                    <dxga:MajorTickmarkOptions FactorThickness="2" Offset="-30"/>
+                                </dxga:ArcScale.MajorTickmarkOptions>
+                                <dxga:ArcScale.MinorTickmarkOptions>
+                                    <dxga:MinorTickmarkOptions FactorLength="4" FactorThickness="3" Offset="-20"/>
+                                </dxga:ArcScale.MinorTickmarkOptions>
+                                <dxga:ArcScale.Needles>
+                                    <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding Rud}" Visible="{Binding Arud}">
+                                        <dxga:ArcScaleNeedle.Animation>
+                                            <dxga:IndicatorAnimation/>
+                                        </dxga:ArcScaleNeedle.Animation>
+                                        <dxga:ArcScaleNeedle.Options>
+                                            <dxga:ArcScaleNeedleOptions/>
+                                        </dxga:ArcScaleNeedle.Options>
+                                        <dxga:ArcScaleNeedle.Presentation>
+                                            <dxga:DefaultArcScaleNeedlePresentation Fill="White"/>
+                                        </dxga:ArcScaleNeedle.Presentation>
+                                    </dxga:ArcScaleNeedle>
+                                </dxga:ArcScale.Needles>
+                                <dxga:ArcScale.TickmarksPresentation>
+                                    <dxga:DefaultTickmarksPresentation MinorTickBrush="White" MajorTickBrush="White"/>
+                                </dxga:ArcScale.TickmarksPresentation>
+                            </dxga:ArcScale>
+                        </dxga:CircularGaugeControl.Scales>
+                    </dxga:CircularGaugeControl>
+                    <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="RUD" Foreground="Black" Background="Red" VerticalAlignment="Top" Height="200" Width="200" FontSize="100" Visibility="{Binding Mrud}"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.7*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- //////////////////////////////AILERON////////////////////////////// -->
+                    <Grid Grid.Column="0" HorizontalAlignment="Center" Height="200" Margin="0,0,0,0" VerticalAlignment="Center" Width="300">
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="100,0,0,0" TextWrapping="Wrap" Text="AILERON" Foreground="White" VerticalAlignment="Top" Height="30" Width="100" FontSize="20" Visibility="Visible"/>
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="100,120,0,0" TextWrapping="Wrap" Text="DEG" Foreground="White" VerticalAlignment="Top" Height="30" Width="100" FontSize="20" Visibility="Visible"/>
+                        <!-- //////////////////////////////AILERON 1////////////////////////////// -->
+                        <Grid HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="150" Margin="0,0,0,0">
+                            <dxga:CircularGaugeControl>
+                                <dxga:CircularGaugeControl.Scales>
+                                    <dxga:ArcScale EndAngle="245" EndValue="20" MajorIntervalCount="4" MinorIntervalCount="2" StartValue="-20" ShowMinorTickmarks="True" ShowLabels="False" ShowLine="True" ShowMajorTickmarks="True" StartAngle="115" Height="225" Margin="165,0,0,0" Width="300">
+                                        <dxga:ArcScale.Needles>
+                                            <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding Ail1}" Visible="{Binding Nail1}">
+                                                <dxga:ArcScaleNeedle.Animation>
+                                                    <dxga:IndicatorAnimation/>
+                                                </dxga:ArcScaleNeedle.Animation>
+                                                <dxga:ArcScaleNeedle.Options>
+                                                    <dxga:ArcScaleNeedleOptions EndOffset="40"/>
+                                                </dxga:ArcScaleNeedle.Options>
+                                                <dxga:ArcScaleNeedle.Presentation>
+                                                    <dxga:YellowSubmarineArcScaleNeedlePresentation Fill="White"/>
+                                                </dxga:ArcScaleNeedle.Presentation>
+                                            </dxga:ArcScaleNeedle>
+                                        </dxga:ArcScale.Needles>
+                                        <dxga:ArcScale.LinePresentation>
+                                            <dxga:DefaultArcScaleLinePresentation Fill="White"/>
+                                        </dxga:ArcScale.LinePresentation>
+                                        <dxga:ArcScale.LineOptions>
+                                            <dxga:ScaleLineOptions Thickness="5"/>
+                                        </dxga:ArcScale.LineOptions>
+                                        <dxga:ArcScale.MajorTickmarkOptions>
+                                            <dxga:MajorTickmarkOptions FactorThickness="2"/>
+                                        </dxga:ArcScale.MajorTickmarkOptions>
+                                        <dxga:ArcScale.TickmarksPresentation>
+                                            <dxga:DefaultTickmarksPresentation MinorTickBrush="White" MajorTickBrush="White"/>
+                                        </dxga:ArcScale.TickmarksPresentation>
+                                        <dxga:ArcScale.CustomLabels>
+                                            <dxga:ScaleCustomLabel Content="20" Foreground="White" FontSize="16" Margin="15,30,0,0" Value="20"/>
+                                            <dxga:ScaleCustomLabel Content="0" Foreground="White" FontSize="16" Margin="40,-10,0,0"/>
+                                            <dxga:ScaleCustomLabel Content="20" Foreground="White" FontSize="16" Margin="15,-55,0,0" Value="-20"/>
+                                        </dxga:ArcScale.CustomLabels>
+                                    </dxga:ArcScale>
+                                </dxga:CircularGaugeControl.Scales>
+                            </dxga:CircularGaugeControl>
+                        </Grid>
+                        <!-- //////////////////////////////AILERON 2////////////////////////////// -->
+                        <Grid HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="150" Margin="150,0,0,0">
+                            <dxga:CircularGaugeControl>
+                                <dxga:CircularGaugeControl.Scales>
+                                    <dxga:ArcScale EndAngle="-65" EndValue="20" StartValue="-20" StartAngle="65" MajorIntervalCount="4" MinorIntervalCount="2" ShowMinorTickmarks="True" ShowLabels="False" ShowLine="True" ShowMajorTickmarks="True" Width="300" Height="225" Margin="-25,0,0,0">
+                                        <dxga:ArcScale.CustomLabels>
+                                            <dxga:ScaleCustomLabel Content="20" Foreground="White" FontSize="16" Margin="-30,30,0,0" Value="20"/>
+                                            <dxga:ScaleCustomLabel Content="0" Foreground="White" FontSize="16" Margin="-50,-10,0,0"/>
+                                            <dxga:ScaleCustomLabel Content="20" Foreground="White" FontSize="16" Margin="-30,-55,0,0" Value="-20"/>
+                                        </dxga:ArcScale.CustomLabels>
+                                        <dxga:ArcScale.LineOptions>
+                                            <dxga:ScaleLineOptions Thickness="5"/>
+                                        </dxga:ArcScale.LineOptions>
+                                        <dxga:ArcScale.MajorTickmarkOptions>
+                                            <dxga:MajorTickmarkOptions FactorThickness="2"/>
+                                        </dxga:ArcScale.MajorTickmarkOptions>
+                                        <dxga:ArcScale.Needles>
+                                            <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding Ail2}" Visible="{Binding Nail2}">
+                                                <dxga:ArcScaleNeedle.Animation>
+                                                    <dxga:IndicatorAnimation/>
+                                                </dxga:ArcScaleNeedle.Animation>
+                                                <dxga:ArcScaleNeedle.Presentation>
+                                                    <dxga:YellowSubmarineArcScaleNeedlePresentation Fill="White"/>
+                                                </dxga:ArcScaleNeedle.Presentation>
+                                            </dxga:ArcScaleNeedle>
+                                        </dxga:ArcScale.Needles>
+                                        <dxga:ArcScale.TickmarksPresentation>
+                                            <dxga:DefaultTickmarksPresentation MinorTickBrush="White" MajorTickBrush="White"/>
+                                        </dxga:ArcScale.TickmarksPresentation>
+                                        <dxga:ArcScale.LinePresentation>
+                                            <dxga:DefaultArcScaleLinePresentation Fill="White"/>
+                                        </dxga:ArcScale.LinePresentation>
+                                    </dxga:ArcScale>
+                                </dxga:CircularGaugeControl.Scales>
+                            </dxga:CircularGaugeControl>
+                        </Grid>
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="AIL" Foreground="Black" Background="Red" VerticalAlignment="Top" Height="200" Width="300" FontSize="150" Visibility="{Binding Mail}"/>
+                    </Grid>
+                    <!-- //////////////////////////////ELEVATOR////////////////////////////// -->
+                    <Grid Grid.Column="1" HorizontalAlignment="Left" Height="200" Margin="0,0,0,0" VerticalAlignment="Center" Width="150">
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="75,60,0,0" TextWrapping="Wrap" Text="ELV" Foreground="White" VerticalAlignment="Top" Height="30" Width="100" FontSize="20" Visibility="Visible"/>
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="75,120,0,0" TextWrapping="Wrap" Text="DEG" Foreground="White" VerticalAlignment="Top" Height="30" Width="100" FontSize="20" Visibility="Visible"/>
+                        <dxga:CircularGaugeControl>
+                            <dxga:CircularGaugeControl.Scales>
+                                <dxga:ArcScale EndAngle="260" EndValue="25" MajorIntervalCount="2" StartValue="-25" ShowMinorTickmarks="True" ShowLabels="False" ShowLine="True" ShowMajorTickmarks="True" StartAngle="100" Height="300" Margin="75,60,0,0" Width="240">
+                                    <dxga:ArcScale.CustomLabels>
+                                        <dxga:ScaleCustomLabel Content="UP" Foreground="White" FontSize="16" Margin="10,15,0,0" Value="25"/>
+                                        <dxga:ScaleCustomLabel Content="DN" Foreground="White" FontSize="16" Margin="10,-40,0,0" Value="-25"/>
+                                        <dxga:ScaleCustomLabel Content="25" Foreground="White" FontSize="16" Margin="0,45,0,0" Value="25"/>
+                                        <dxga:ScaleCustomLabel Content="25" Foreground="White" FontSize="16" Margin="0,-68,0,0" Value="-25"/>
+                                        <dxga:ScaleCustomLabel Content="0" Foreground="White" FontSize="16" Margin="50,-10,0,0"/>
+                                    </dxga:ArcScale.CustomLabels>
+                                    <dxga:ArcScale.MajorTickmarkOptions>
+                                        <dxga:MajorTickmarkOptions FactorLength="2" FactorThickness="3"/>
+                                    </dxga:ArcScale.MajorTickmarkOptions>
+                                    <dxga:ArcScale.MinorTickmarkOptions>
+                                        <dxga:MinorTickmarkOptions FactorThickness="2"/>
+                                    </dxga:ArcScale.MinorTickmarkOptions>
+                                    <dxga:ArcScale.LineOptions>
+                                        <dxga:ScaleLineOptions Thickness="5"/>
+                                    </dxga:ArcScale.LineOptions>
+                                    <dxga:ArcScale.Needles>
+                                        <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding Elv}" Visible="{Binding Aelv}">
+                                            <dxga:ArcScaleNeedle.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleNeedle.Animation>
+                                            <dxga:ArcScaleNeedle.Options>
+                                                <dxga:ArcScaleNeedleOptions EndOffset="50"/>
+                                            </dxga:ArcScaleNeedle.Options>
+                                            <dxga:ArcScaleNeedle.Presentation>
+                                                <dxga:DefaultArcScaleNeedlePresentation Fill="White"/>
+                                            </dxga:ArcScaleNeedle.Presentation>
+                                        </dxga:ArcScaleNeedle>
+                                    </dxga:ArcScale.Needles>
+                                    <dxga:ArcScale.LinePresentation>
+                                        <dxga:DefaultArcScaleLinePresentation Fill="White"/>
+                                    </dxga:ArcScale.LinePresentation>
+                                    <dxga:ArcScale.TickmarksPresentation>
+                                        <dxga:DefaultTickmarksPresentation MinorTickBrush="White" MajorTickBrush="White"/>
+                                    </dxga:ArcScale.TickmarksPresentation>
+                                </dxga:ArcScale>
+                            </dxga:CircularGaugeControl.Scales>
+                        </dxga:CircularGaugeControl>
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="ELV" Foreground="Black" Background="Red" VerticalAlignment="Top" Height="200" Width="150" FontSize="90" Visibility="{Binding Melv}"/>
+                    </Grid>
+                    <Border Grid.Column="1" Margin="0,0,0,0" BorderThickness="5" BorderBrush="White" HorizontalAlignment="Right"/>
+                </Grid>
+                <Border Margin="0,0,0,0" BorderThickness="5" BorderBrush="White" HorizontalAlignment="Right"/>
+            </Grid>
+        <!-- //////////////////////////////GRID 2////////////////////////////// -->
+
+        <!-- //////////////////////////////GRID 3////////////////////////////// -->
+        <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.51*"/>
+                    <RowDefinition Height="0.75*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- //////////////////////////////BRAKES PSI////////////////////////////// -->
+                    <Grid Grid.Column="0" HorizontalAlignment="Left" Height="120" Margin="0,0,0,0" VerticalAlignment="Top" Width="192">
+                        <Border BorderBrush="{Binding Nbks}" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="25,8,0,0" VerticalAlignment="Top" Width="150">
+                            <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="NORM" Foreground="White" VerticalAlignment="Top" Height="36" Width="146" FontSize="25"/>
+                        </Border>
+                        <Border BorderBrush="{Binding Cbks}" BorderThickness="2" HorizontalAlignment="Left" Height="60" Margin="20,55,0,0" VerticalAlignment="Top" Width="165">
+                            <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="{Binding Bks}" Foreground="White" VerticalAlignment="Top" Height="58" Width="161" FontSize="35"/>
+                        </Border>
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="NORM" Foreground="Black" Background="Red" VerticalAlignment="Top" Height="120" Width="192" FontSize="60" Visibility="{Binding Mbks}"/>
+                    </Grid>
+                    <!-- //////////////////////////////BRAKES PSI////////////////////////////// -->
+                    <Grid Grid.Column="1" HorizontalAlignment="Left" Height="120" Margin="0,0,0,0" VerticalAlignment="Top" Width="192">
+                        <Border BorderBrush="{Binding Nemc}" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="25,8,0,0" VerticalAlignment="Top" Width="150">
+                            <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="EMER" Foreground="White" VerticalAlignment="Top" Height="36" Width="146" FontSize="25"/>
+                        </Border>
+                        <Border BorderBrush="{Binding Cemc}" BorderThickness="2" HorizontalAlignment="Left" Height="60" Margin="20,55,0,0" VerticalAlignment="Top" Width="165">
+                            <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="{Binding Emc}" Foreground="White" VerticalAlignment="Top" Height="58" Width="161" FontSize="35"/>
+                        </Border>
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="EMER" Foreground="Black" Background="Red" VerticalAlignment="Top" Height="120" Width="192" FontSize="60" Visibility="{Binding Memc}"/>
+                    </Grid>
+                    <!-- //////////////////////////////AUXILIARY HYDRAULICS////////////////////////////// -->
+                    <Grid Grid.Column="2" HorizontalAlignment="Left" Height="120" Margin="0,0,0,0" VerticalAlignment="Top" Width="192">
+                        <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="25,8,0,0" VerticalAlignment="Top" Width="150">
+                            <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="AUX" Foreground="White" VerticalAlignment="Top" Height="36" Width="146" FontSize="25"/>
+                        </Border>
+                        <Border BorderBrush="{Binding Caux}" BorderThickness="2" HorizontalAlignment="Left" Height="60" Margin="20,55,0,0" VerticalAlignment="Top" Width="165">
+                            <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="{Binding Aux}" Foreground="White" VerticalAlignment="Top" Height="58" Width="161" FontSize="35"/>
+                        </Border>
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="AUX" Foreground="Black" Background="Red" VerticalAlignment="Top" Height="120" Width="192" FontSize="60" Visibility="{Binding Maux}"/>
+                    </Grid>
+                    <!-- //////////////////////////////SYSTEM UB////////////////////////////// -->
+                    <Grid Grid.Column="3" HorizontalAlignment="Left" Height="120" Margin="0,0,0,0" VerticalAlignment="Top" Width="192">
+                        <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="25,8,0,0" VerticalAlignment="Top" Width="150">
+                            <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="UTIL" Foreground="White" VerticalAlignment="Top" Height="36" Width="146" FontSize="25"/>
+                        </Border>
+                        <Border BorderBrush="{Binding Csys}" BorderThickness="2" HorizontalAlignment="Left" Height="60" Margin="20,55,0,0" VerticalAlignment="Top" Width="165">
+                            <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="{Binding Sys1}" Foreground="White" VerticalAlignment="Top" Height="58" Width="161" FontSize="35"/>
+                        </Border>
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="UTIL" Foreground="Black" Background="Red" VerticalAlignment="Top" Height="120" Width="192" FontSize="60" Visibility="{Binding Msys}"/>
+                    </Grid>
+                    <!-- //////////////////////////////SYSTEM UB////////////////////////////// -->
+                    <Grid Grid.Column="4" HorizontalAlignment="Left" Height="120" Margin="0,0,0,0" VerticalAlignment="Top" Width="192">
+                        <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="25,8,0,0" VerticalAlignment="Top" Width="150">
+                            <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="BOOST" Foreground="Cyan" VerticalAlignment="Top" Height="36" Width="146" FontSize="25"/>
+                        </Border>
+                        <Border BorderBrush="{Binding Csys}" BorderThickness="2" HorizontalAlignment="Left" Height="60" Margin="20,55,0,0" VerticalAlignment="Top" Width="165">
+                            <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="{Binding Sys2}" Foreground="White" VerticalAlignment="Top" Height="58" Width="161" FontSize="35"/>
+                        </Border>
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="BST" Foreground="Black" Background="Red" VerticalAlignment="Top" Height="120" Width="192" FontSize="60" Visibility="{Binding Msys}"/>
+                    </Grid>
+                    <!-- //////////////////////////////RUDDER UB////////////////////////////// -->
+                    <Grid Grid.Column="5" HorizontalAlignment="Left" Height="120" Margin="0,0,0,0" VerticalAlignment="Top" Width="192">
+                        <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="25,8,0,0" VerticalAlignment="Top" Width="150">
+                            <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="UTIL" Foreground="White" VerticalAlignment="Top" Height="36" Width="146" FontSize="25"/>
+                        </Border>
+                        <Border BorderBrush="{Binding Cbrud}" BorderThickness="2" HorizontalAlignment="Left" Height="60" Margin="20,55,0,0" VerticalAlignment="Top" Width="165">
+                            <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="{Binding Brud1}" Foreground="White" VerticalAlignment="Top" Height="58" Width="161" FontSize="35"/>
+                        </Border>
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="UTIL" Foreground="Black" Background="Red" VerticalAlignment="Top" Height="120" Width="192" FontSize="60" Visibility="{Binding Mbrud}"/>
+                    </Grid>
+                    <!-- //////////////////////////////RUDDER UB////////////////////////////// -->
+                    <Grid Grid.Column="6" HorizontalAlignment="Left" Height="120" Margin="0,0,0,0" VerticalAlignment="Top" Width="192">
+                        <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="25,8,0,0" VerticalAlignment="Top" Width="150">
+                            <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="BOOST" Foreground="Cyan" VerticalAlignment="Top" Height="36" Width="146" FontSize="25"/>
+                        </Border>
+                        <Border BorderBrush="{Binding Cbrud}" BorderThickness="2" HorizontalAlignment="Left" Height="60" Margin="20,55,0,0" VerticalAlignment="Top" Width="165">
+                            <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="{Binding Brud2}" Foreground="White" VerticalAlignment="Top" Height="58" Width="161" FontSize="35"/>
+                        </Border>
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="BST" Foreground="Black" Background="Red" VerticalAlignment="Top" Height="120" Width="192" FontSize="60" Visibility="{Binding Mbrud}"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- //////////////////////////////BRAKES PSI////////////////////////////// -->
+                    <Grid Grid.Column="0" HorizontalAlignment="Center" Height="170" Margin="0,0,0,0" VerticalAlignment="Center" Width="384">
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="147,50,0,0" TextWrapping="Wrap" Text="BRAKES" Foreground="White" VerticalAlignment="Top" Height="30" Width="100" FontSize="20" Visibility="Visible"/>
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="147,100,0,0" TextWrapping="Wrap" Text="PSI" Foreground="White" VerticalAlignment="Top" Height="30" Width="100" FontSize="20" Visibility="Visible"/>
+                        <Grid HorizontalAlignment="Left" Height="170" Margin="10,0,0,0" VerticalAlignment="Top" Width="187">
+                            <dxga:CircularGaugeControl>
+                                <dxga:CircularGaugeControl.Scales>
+                                    <dxga:ArcScale EndAngle="245" EndValue="5000" Height="230" Margin="330,-30,0,0" ShowLabels="False" ShowLine="True" StartAngle="115" Width="260" MajorIntervalCount="2" MinorIntervalCount="1" HorizontalAlignment="Right" VerticalAlignment="Top">
+                                        <dxga:ArcScale.RangeBars>
+                                            <dxga:ArcScaleRangeBar AnchorValue="3500" Value="2500">
+                                                <dxga:ArcScaleRangeBar.Options>
+                                                    <dxga:ArcScaleRangeBarOptions Offset="-27" Thickness="6"/>
+                                                </dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBar.Presentation>
+                                                    <dxga:DefaultArcScaleRangeBarPresentation Fill="Green"/>
+                                                </dxga:ArcScaleRangeBar.Presentation>
+                                            </dxga:ArcScaleRangeBar>
+                                            <dxga:ArcScaleRangeBar IsInteractive="True" AnchorValue="{Binding B1bks}" Visible="{Binding Vbks}">
+                                                <dxga:ArcScaleRangeBar.Animation>
+                                                    <dxga:IndicatorAnimation/>
+                                                </dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:ArcScaleRangeBar.Options>
+                                                    <dxga:ArcScaleRangeBarOptions Offset="-33"/>
+                                                </dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBar.Presentation>
+                                                    <dxga:DefaultArcScaleRangeBarPresentation Fill="Yellow"/>
+                                                </dxga:ArcScaleRangeBar.Presentation>
+                                            </dxga:ArcScaleRangeBar>
+                                            <dxga:ArcScaleRangeBar IsInteractive="True" AnchorValue="{Binding B2bks}" Visible="{Binding Vbks}">
+                                                <dxga:ArcScaleRangeBar.Animation>
+                                                    <dxga:IndicatorAnimation/>
+                                                </dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:ArcScaleRangeBar.Options>
+                                                    <dxga:ArcScaleRangeBarOptions Offset="-33"/>
+                                                </dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBar.Presentation>
+                                                    <dxga:DefaultArcScaleRangeBarPresentation Fill="Red"/>
+                                                </dxga:ArcScaleRangeBar.Presentation>
+                                            </dxga:ArcScaleRangeBar>
+                                        </dxga:ArcScale.RangeBars>
+                                        <dxga:ArcScale.LineOptions>
+                                            <dxga:ScaleLineOptions Thickness="4"/>
+                                        </dxga:ArcScale.LineOptions>
+                                        <dxga:ArcScale.MajorTickmarkOptions>
+                                            <dxga:MajorTickmarkOptions FactorLength="2" FactorThickness="2"/>
+                                        </dxga:ArcScale.MajorTickmarkOptions>
+                                        <dxga:ArcScale.Markers>
+                                            <dxga:ArcScaleMarker Value="750" Visible="{Binding Vbks}">
+                                                <dxga:ArcScaleMarker.Options>
+                                                    <dxga:ArcScaleMarkerOptions FactorWidth="2" Offset="-32"/>
+                                                </dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarker.Presentation>
+                                                    <dxga:MagicLightArcScaleMarkerPresentation Fill="Yellow"/>
+                                                </dxga:ArcScaleMarker.Presentation>
+                                            </dxga:ArcScaleMarker>
+                                            <dxga:ArcScaleMarker Value="4250" Visible="{Binding Vbks}">
+                                                <dxga:ArcScaleMarker.Options>
+                                                    <dxga:ArcScaleMarkerOptions FactorWidth="2"/>
+                                                </dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarker.Presentation>
+                                                    <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                                </dxga:ArcScaleMarker.Presentation>
+                                            </dxga:ArcScaleMarker>
+                                        </dxga:ArcScale.Markers>
+                                        <dxga:ArcScale.LinePresentation>
+                                            <dxga:DefaultArcScaleLinePresentation Fill="White"/>
+                                        </dxga:ArcScale.LinePresentation>
+                                        <dxga:ArcScale.Needles>
+                                            <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding Abks}" Visible="{Binding Vbks}">
+                                                <dxga:ArcScaleNeedle.Animation>
+                                                    <dxga:IndicatorAnimation/>
+                                                </dxga:ArcScaleNeedle.Animation>
+                                                <dxga:ArcScaleNeedle.Presentation>
+                                                    <dxga:DefaultArcScaleNeedlePresentation Fill="White"/>
+                                                </dxga:ArcScaleNeedle.Presentation>
+                                            </dxga:ArcScaleNeedle>
+                                        </dxga:ArcScale.Needles>
+                                        <dxga:ArcScale.TickmarksPresentation>
+                                            <dxga:DefaultTickmarksPresentation MinorTickBrush="White" MajorTickBrush="White"/>
+                                        </dxga:ArcScale.TickmarksPresentation>
+                                    </dxga:ArcScale>
+                                </dxga:CircularGaugeControl.Scales>
+                            </dxga:CircularGaugeControl>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Height="170" Margin="197,0,0,0" VerticalAlignment="Top" Width="187">
+                            <dxga:CircularGaugeControl>
+                                <dxga:CircularGaugeControl.Scales>
+                                    <dxga:ArcScale EndAngle="-65" EndValue="5000" Height="230" Margin="-115,-30,0,0" ShowLabels="False" ShowLine="True" StartAngle="65" Width="260" MajorIntervalCount="2" MinorIntervalCount="1" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                        <dxga:ArcScale.RangeBars>
+                                            <dxga:ArcScaleRangeBar AnchorValue="3500" Value="750">
+                                                <dxga:ArcScaleRangeBar.Options>
+                                                    <dxga:ArcScaleRangeBarOptions Offset="-27" Thickness="4"/>
+                                                </dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBar.Presentation>
+                                                    <dxga:DefaultArcScaleRangeBarPresentation Fill="Green"/>
+                                                </dxga:ArcScaleRangeBar.Presentation>
+                                            </dxga:ArcScaleRangeBar>
+                                            <dxga:ArcScaleRangeBar IsInteractive="True" AnchorValue="{Binding B1emc}" Visible="{Binding Vemc}">
+                                                <dxga:ArcScaleRangeBar.Animation>
+                                                    <dxga:IndicatorAnimation/>
+                                                </dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:ArcScaleRangeBar.Options>
+                                                    <dxga:ArcScaleRangeBarOptions Offset="-33"/>
+                                                </dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBar.Presentation>
+                                                    <dxga:DefaultArcScaleRangeBarPresentation Fill="Yellow"/>
+                                                </dxga:ArcScaleRangeBar.Presentation>
+                                            </dxga:ArcScaleRangeBar>
+                                            <dxga:ArcScaleRangeBar IsInteractive="True" AnchorValue="{Binding B2emc}" Visible="{Binding Vemc}">
+                                                <dxga:ArcScaleRangeBar.Animation>
+                                                    <dxga:IndicatorAnimation/>
+                                                </dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:ArcScaleRangeBar.Options>
+                                                    <dxga:ArcScaleRangeBarOptions Offset="-33"/>
+                                                </dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBar.Presentation>
+                                                    <dxga:DefaultArcScaleRangeBarPresentation Fill="Red"/>
+                                                </dxga:ArcScaleRangeBar.Presentation>
+                                            </dxga:ArcScaleRangeBar>
+                                        </dxga:ArcScale.RangeBars>
+                                        <dxga:ArcScale.Markers>
+                                            <dxga:ArcScaleMarker Value="750" Visible="{Binding Vemc}">
+                                                <dxga:ArcScaleMarker.Options>
+                                                    <dxga:ArcScaleMarkerOptions FactorWidth="2"/>
+                                                </dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarker.Presentation>
+                                                    <dxga:MagicLightArcScaleMarkerPresentation Fill="Yellow"/>
+                                                </dxga:ArcScaleMarker.Presentation>
+                                            </dxga:ArcScaleMarker>
+                                            <dxga:ArcScaleMarker Value="4250" Visible="{Binding Vemc}">
+                                                <dxga:ArcScaleMarker.Options>
+                                                    <dxga:ArcScaleMarkerOptions FactorWidth="2"/>
+                                                </dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarker.Presentation>
+                                                    <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                                </dxga:ArcScaleMarker.Presentation>
+                                            </dxga:ArcScaleMarker>
+                                        </dxga:ArcScale.Markers>
+                                        <dxga:ArcScale.LineOptions>
+                                            <dxga:ScaleLineOptions Thickness="4"/>
+                                        </dxga:ArcScale.LineOptions>
+                                        <dxga:ArcScale.MajorTickmarkOptions>
+                                            <dxga:MajorTickmarkOptions FactorLength="2" FactorThickness="2"/>
+                                        </dxga:ArcScale.MajorTickmarkOptions>
+                                        <dxga:ArcScale.LinePresentation>
+                                            <dxga:DefaultArcScaleLinePresentation Fill="White"/>
+                                        </dxga:ArcScale.LinePresentation>
+                                        <dxga:ArcScale.Needles>
+                                            <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding Aemc}" Visible="{Binding Vemc}">
+                                                <dxga:ArcScaleNeedle.Animation>
+                                                    <dxga:IndicatorAnimation/>
+                                                </dxga:ArcScaleNeedle.Animation>
+                                                <dxga:ArcScaleNeedle.Presentation>
+                                                    <dxga:DefaultArcScaleNeedlePresentation Fill="White"/>
+                                                </dxga:ArcScaleNeedle.Presentation>
+                                            </dxga:ArcScaleNeedle>
+                                        </dxga:ArcScale.Needles>
+                                        <dxga:ArcScale.TickmarksPresentation>
+                                            <dxga:DefaultTickmarksPresentation MinorTickBrush="White" MajorTickBrush="White"/>
+                                        </dxga:ArcScale.TickmarksPresentation>
+                                    </dxga:ArcScale>
+                                </dxga:CircularGaugeControl.Scales>
+                            </dxga:CircularGaugeControl>
+                        </Grid>
+                    </Grid>
+                    <!-- //////////////////////////////AUXILIARY HYDRAULICS////////////////////////////// -->
+                    <Grid Grid.Column="1" HorizontalAlignment="Center" Height="170" Margin="0,0,0,0" VerticalAlignment="Center" Width="192">
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="30,100,0,0" TextWrapping="Wrap" Text="PSI" Foreground="White" VerticalAlignment="Top" Height="30" Width="100" FontSize="20" Visibility="Visible"/>
+                        <dxga:CircularGaugeControl >
+                            <dxga:CircularGaugeControl.Scales>
+                                <dxga:ArcScale EndAngle="-65" EndValue="4000" Height="230" Margin="-30,-30,0,0" ShowLabels="False" ShowLine="True" StartAngle="65" Width="260" MajorIntervalCount="2" MinorIntervalCount="1" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                    <dxga:ArcScale.RangeBars>
+                                        <dxga:ArcScaleRangeBar AnchorValue="3500">
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-27" Thickness="4"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Green"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                        <dxga:ArcScaleRangeBar IsInteractive="True" AnchorValue="{Binding B1aux}" Visible="{Binding Vaux}">
+                                            <dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleRangeBar.Animation>
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-33"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Red"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                    </dxga:ArcScale.RangeBars>
+                                    <dxga:ArcScale.Markers>
+                                        <dxga:ArcScaleMarker Value="3500" Visible="{Binding Vaux}">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                    </dxga:ArcScale.Markers>
+                                    <dxga:ArcScale.LineOptions>
+                                        <dxga:ScaleLineOptions Thickness="4"/>
+                                    </dxga:ArcScale.LineOptions>
+                                    <dxga:ArcScale.MajorTickmarkOptions>
+                                        <dxga:MajorTickmarkOptions FactorLength="2" FactorThickness="2"/>
+                                    </dxga:ArcScale.MajorTickmarkOptions>
+                                    <dxga:ArcScale.LinePresentation>
+                                        <dxga:DefaultArcScaleLinePresentation Fill="White"/>
+                                    </dxga:ArcScale.LinePresentation>
+                                    <dxga:ArcScale.Needles>
+                                        <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding Aaux}" Visible="{Binding Vaux}">
+                                            <dxga:ArcScaleNeedle.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleNeedle.Animation>
+                                            <dxga:ArcScaleNeedle.Presentation>
+                                                <dxga:DefaultArcScaleNeedlePresentation Fill="White"/>
+                                            </dxga:ArcScaleNeedle.Presentation>
+                                        </dxga:ArcScaleNeedle>
+                                    </dxga:ArcScale.Needles>
+                                    <dxga:ArcScale.TickmarksPresentation>
+                                        <dxga:DefaultTickmarksPresentation MinorTickBrush="White" MajorTickBrush="White"/>
+                                    </dxga:ArcScale.TickmarksPresentation>
+                                </dxga:ArcScale>
+                            </dxga:CircularGaugeControl.Scales>
+                        </dxga:CircularGaugeControl>
+                    </Grid>
+                    <!-- //////////////////////////////SYSTEM UB////////////////////////////// -->
+                    <Grid Grid.Column="2" HorizontalAlignment="Center" Height="170" Margin="0,0,0,0" VerticalAlignment="Center" Width="192">
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="30,50,0,0" TextWrapping="Wrap" Text="SYS" Foreground="White" VerticalAlignment="Top" Height="30" Width="100" FontSize="20" Visibility="Visible"/>
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="30,100,0,0" TextWrapping="Wrap" Text="PSI" Foreground="White" VerticalAlignment="Top" Height="30" Width="100" FontSize="20" Visibility="Visible"/>
+                        <dxga:CircularGaugeControl>
+                            <dxga:CircularGaugeControl.Scales>
+                                <dxga:ArcScale EndAngle="-65" EndValue="4000" Height="230" Margin="-30,-30,0,0" ShowLabels="False" ShowLine="True" StartAngle="65" Width="260" MajorIntervalCount="2" MinorIntervalCount="1" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                    <dxga:ArcScale.RangeBars>
+                                        <dxga:ArcScaleRangeBar AnchorValue="3500">
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-27" Thickness="4"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Green"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                        <dxga:ArcScaleRangeBar IsInteractive="True" AnchorValue="{Binding B1sys}" Visible="{Binding Vsys}">
+                                            <dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleRangeBar.Animation>
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-33"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Red"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                    </dxga:ArcScale.RangeBars>
+                                    <dxga:ArcScale.Markers>
+                                        <dxga:ArcScaleMarker Value="3500" Visible="{Binding Vsys}">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                    </dxga:ArcScale.Markers>
+                                    <dxga:ArcScale.LineOptions>
+                                        <dxga:ScaleLineOptions Thickness="4"/>
+                                    </dxga:ArcScale.LineOptions>
+                                    <dxga:ArcScale.MajorTickmarkOptions>
+                                        <dxga:MajorTickmarkOptions FactorLength="2" FactorThickness="2"/>
+                                    </dxga:ArcScale.MajorTickmarkOptions>
+                                    <dxga:ArcScale.LinePresentation>
+                                        <dxga:DefaultArcScaleLinePresentation Fill="White"/>
+                                    </dxga:ArcScale.LinePresentation>
+                                    <dxga:ArcScale.Needles>
+                                        <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding A1sys}" Visible="{Binding Vsys}">
+                                            <dxga:ArcScaleNeedle.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleNeedle.Animation>
+                                            <dxga:ArcScaleNeedle.Presentation>
+                                                <dxga:DefaultArcScaleNeedlePresentation Fill="White"/>
+                                            </dxga:ArcScaleNeedle.Presentation>
+                                        </dxga:ArcScaleNeedle>
+                                        <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding A2sys}" Visible="{Binding Vsys}">
+                                            <dxga:ArcScaleNeedle.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleNeedle.Animation>
+                                            <dxga:ArcScaleNeedle.Presentation>
+                                                <dxga:DefaultArcScaleNeedlePresentation Fill="Cyan"/>
+                                            </dxga:ArcScaleNeedle.Presentation>
+                                        </dxga:ArcScaleNeedle>
+                                    </dxga:ArcScale.Needles>
+                                    <dxga:ArcScale.TickmarksPresentation>
+                                        <dxga:DefaultTickmarksPresentation MinorTickBrush="White" MajorTickBrush="White"/>
+                                    </dxga:ArcScale.TickmarksPresentation>
+                                </dxga:ArcScale>
+                            </dxga:CircularGaugeControl.Scales>
+                        </dxga:CircularGaugeControl>
+                    </Grid>
+                    <!-- //////////////////////////////RUDDER UB////////////////////////////// -->
+                    <Grid Grid.Column="3" HorizontalAlignment="Center" Height="200" Margin="0,0,0,0" VerticalAlignment="Center" Width="192">
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="30,50,0,0" TextWrapping="Wrap" Text="RUD" Foreground="White" VerticalAlignment="Top" Height="30" Width="100" FontSize="20" Visibility="Visible"/>
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="30,100,0,0" TextWrapping="Wrap" Text="PSI" Foreground="White" VerticalAlignment="Top" Height="30" Width="100" FontSize="20" Visibility="Visible"/>
+                        <dxga:CircularGaugeControl >
+                            <dxga:CircularGaugeControl.Scales>
+                                <dxga:ArcScale EndAngle="-65" EndValue="4000" Height="230" Margin="-30,-15,0,0" ShowLabels="False" ShowLine="True" StartAngle="65" Width="260" MajorIntervalCount="2" MinorIntervalCount="1" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                    <dxga:ArcScale.RangeBars>
+                                        <dxga:ArcScaleRangeBar AnchorValue="3500">
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-27" Thickness="4"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Green"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                        <dxga:ArcScaleRangeBar IsInteractive="True" AnchorValue="{Binding B1brud}" Visible="{Binding Vbrud}">
+                                            <dxga:ArcScaleRangeBar.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleRangeBar.Animation>
+                                            <dxga:ArcScaleRangeBar.Options>
+                                                <dxga:ArcScaleRangeBarOptions Offset="-33"/>
+                                            </dxga:ArcScaleRangeBar.Options>
+                                            <dxga:ArcScaleRangeBar.Presentation>
+                                                <dxga:DefaultArcScaleRangeBarPresentation Fill="Red"/>
+                                            </dxga:ArcScaleRangeBar.Presentation>
+                                        </dxga:ArcScaleRangeBar>
+                                    </dxga:ArcScale.RangeBars>
+                                    <dxga:ArcScale.Markers>
+                                        <dxga:ArcScaleMarker Value="3500" Visible="{Binding Vbrud}">
+                                            <dxga:ArcScaleMarker.Options>
+                                                <dxga:ArcScaleMarkerOptions FactorWidth="2"/>
+                                            </dxga:ArcScaleMarker.Options>
+                                            <dxga:ArcScaleMarker.Presentation>
+                                                <dxga:MagicLightArcScaleMarkerPresentation Fill="Red"/>
+                                            </dxga:ArcScaleMarker.Presentation>
+                                        </dxga:ArcScaleMarker>
+                                    </dxga:ArcScale.Markers>
+                                    <dxga:ArcScale.LineOptions>
+                                        <dxga:ScaleLineOptions Thickness="4"/>
+                                    </dxga:ArcScale.LineOptions>
+                                    <dxga:ArcScale.MajorTickmarkOptions>
+                                        <dxga:MajorTickmarkOptions FactorLength="2" FactorThickness="2"/>
+                                    </dxga:ArcScale.MajorTickmarkOptions>
+                                    <dxga:ArcScale.LinePresentation>
+                                        <dxga:DefaultArcScaleLinePresentation Fill="White"/>
+                                    </dxga:ArcScale.LinePresentation>
+                                    <dxga:ArcScale.Needles>
+                                        <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding A1brud}" Visible="{Binding Vbrud}">
+                                            <dxga:ArcScaleNeedle.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleNeedle.Animation>
+                                            <dxga:ArcScaleNeedle.Presentation>
+                                                <dxga:DefaultArcScaleNeedlePresentation Fill="White"/>
+                                            </dxga:ArcScaleNeedle.Presentation>
+                                        </dxga:ArcScaleNeedle>
+                                        <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding A2brud}" Visible="{Binding Vbrud}">
+                                            <dxga:ArcScaleNeedle.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleNeedle.Animation>
+                                            <dxga:ArcScaleNeedle.Presentation>
+                                                <dxga:DefaultArcScaleNeedlePresentation Fill="Cyan"/>
+                                            </dxga:ArcScaleNeedle.Presentation>
+                                        </dxga:ArcScaleNeedle>
+                                    </dxga:ArcScale.Needles>
+                                    <dxga:ArcScale.TickmarksPresentation>
+                                        <dxga:DefaultTickmarksPresentation MinorTickBrush="White" MajorTickBrush="White"/>
+                                    </dxga:ArcScale.TickmarksPresentation>
+                                </dxga:ArcScale>
+                            </dxga:CircularGaugeControl.Scales>
+                        </dxga:CircularGaugeControl>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.8*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="0.6*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <!-- //////////////////////////////FUEL PRESS////////////////////////////// -->
+                        <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Center" Height="24" Margin="0,0,0,0" VerticalAlignment="Center" Width="300">
+                            <TextBlock TextAlignment="Center" TextWrapping="Wrap" Text="{Binding Fflp}" Foreground="Yellow"/>
+                        </Border>
+                    </Grid>
+                    <!-- //////////////////////////////FLAPS////////////////////////////// -->
+                    <Grid Grid.Column="2" HorizontalAlignment="Center" Height="200" Margin="0,0,0,0" VerticalAlignment="Center" Width="200">
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="50,60,0,0" TextWrapping="Wrap" Text="FLAPS" Foreground="White" VerticalAlignment="Top" Height="30" Width="100" FontSize="20" Visibility="Visible"/>
+                        <dxga:CircularGaugeControl >
+                            <dxga:CircularGaugeControl.Scales>
+                                <dxga:ArcScale EndAngle="100" HorizontalAlignment="Center" Height="240" MajorIntervalCount="5" MinorIntervalCount="2" ShowMinorTickmarks="True" ShowLabels="False" ShowLine="True" ShowMajorTickmarks="True" StartAngle="-100" VerticalAlignment="Center" Width="240">
+                                    <dxga:ArcScale.Needles>
+                                        <dxga:ArcScaleNeedle IsInteractive="True" Value="{Binding Fps}" Visible="{Binding Afps}">
+                                            <dxga:ArcScaleNeedle.Animation>
+                                                <dxga:IndicatorAnimation/>
+                                            </dxga:ArcScaleNeedle.Animation>
+                                            <dxga:ArcScaleNeedle.Options>
+                                                <dxga:ArcScaleNeedleOptions EndOffset="45"/>
+                                            </dxga:ArcScaleNeedle.Options>
+                                            <dxga:ArcScaleNeedle.Presentation>
+                                                <dxga:CleanWhiteArcScaleNeedlePresentation Fill="White"/>
+                                            </dxga:ArcScaleNeedle.Presentation>
+                                        </dxga:ArcScaleNeedle>
+                                    </dxga:ArcScale.Needles>
+                                    <dxga:ArcScale.MajorTickmarkOptions>
+                                        <dxga:MajorTickmarkOptions FactorLength="2" FactorThickness="2"/>
+                                    </dxga:ArcScale.MajorTickmarkOptions>
+                                    <dxga:ArcScale.MinorTickmarkOptions>
+                                        <dxga:MinorTickmarkOptions FactorThickness="2"/>
+                                    </dxga:ArcScale.MinorTickmarkOptions>
+                                    <dxga:ArcScale.TickmarksPresentation>
+                                        <dxga:DefaultTickmarksPresentation MinorTickBrush="White" MajorTickBrush="White"/>
+                                    </dxga:ArcScale.TickmarksPresentation>
+                                    <dxga:ArcScale.LinePresentation>
+                                        <dxga:DefaultArcScaleLinePresentation Fill="White"/>
+                                    </dxga:ArcScale.LinePresentation>
+                                    <dxga:ArcScale.LineOptions>
+                                        <dxga:ScaleLineOptions Thickness="4"/>
+                                    </dxga:ArcScale.LineOptions>
+                                    <dxga:ArcScale.CustomLabels>
+                                        <dxga:ScaleCustomLabel Content="UP" Foreground="White" FontSize="16" Margin="0,45,0,0"/>
+                                        <dxga:ScaleCustomLabel Content="DN" Foreground="White" FontSize="16" Margin="0,-70,0,0" Value="100"/>
+                                        <dxga:ScaleCustomLabel Content="20" Foreground="White" FontSize="16" Margin="-35,40,0,0" Value="20"/>
+                                        <dxga:ScaleCustomLabel Content="40" Foreground="White" FontSize="16" Margin="-65,5,0,0" Value="40"/>
+                                        <dxga:ScaleCustomLabel Content="60" Foreground="White" FontSize="16" Margin="-65,-30,0,0" Value="60"/>
+                                        <dxga:ScaleCustomLabel Content="80" Foreground="White" FontSize="16" Margin="-40,-60,0,0" Value="80"/>
+                                    </dxga:ArcScale.CustomLabels>
+                                    <dxga:ArcScale.LabelOptions>
+                                        <dxga:ArcScaleLabelOptions ShowLast="False" ShowFirst="False"/>
+                                    </dxga:ArcScale.LabelOptions>
+                                    <dxga:ArcScale.LabelPresentation>
+                                        <dxga:DefaultScaleLabelPresentation />
+                                    </dxga:ArcScale.LabelPresentation>
+                                </dxga:ArcScale>
+                            </dxga:CircularGaugeControl.Scales>
+                        </dxga:CircularGaugeControl>
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="FLAPS" Foreground="Black" Background="Red" VerticalAlignment="Top" Height="200" Width="200" FontSize="70" Visibility="{Binding Mfps}"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+        <!-- //////////////////////////////GRID 3////////////////////////////// -->
+    </Grid>
+</Window>

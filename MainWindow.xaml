@@ -1,0 +1,114 @@
+﻿<dx:ThemedWindow
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxga="http://schemas.devexpress.com/winfx/2008/xaml/gauges" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:EIDS.Instrumentos"
+    x:Class="EIDS.MainWindow"
+    Title="MainWindow" Height="480" Width="800" WindowState="Maximized" MaxWidth="800" MaxHeight="480">
+    <Window.DataContext>
+        <vm:VM2/>
+    </Window.DataContext>
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" HorizontalAlignment="Center" Height="480" VerticalAlignment="Center" Width="400" Margin="0,0,0,0">
+            <TextBlock HorizontalAlignment="Left" Margin="150,290,0,0" TextWrapping="Wrap" Text="PERCENT RPM" VerticalAlignment="Top" Foreground="White" FontSize="25 " Width="112" Height="68"/>
+            <dxga:CircularGaugeControl Name="Ins1" FontSize="24" FontFamily="Symbol" FontWeight="Bold" Foreground="#FFD1D1D1" BorderBrush="#FFB2B2B2">
+                <dxga:CircularGaugeControl.Scales >
+                    <dxga:ArcScale EndAngle="180" StartAngle="-90" FontSize="600" Foreground="White" Width="400" Height="400">
+                        <dxga:ArcScale.LabelOptions>
+                            <dxga:ArcScaleLabelOptions Offset="-75"/>
+                        </dxga:ArcScale.LabelOptions>
+                        <dxga:ArcScale.TickmarksPresentation>
+                            <dxga:DefaultTickmarksPresentation MinorTickBrush="White" MajorTickBrush="White"/>
+                        </dxga:ArcScale.TickmarksPresentation>
+                        <dxga:ArcScale.MinorTickmarkOptions>
+                            <dxga:MinorTickmarkOptions FactorLength="2" FactorThickness="2"/>
+                        </dxga:ArcScale.MinorTickmarkOptions>
+                        <dxga:ArcScale.MajorTickmarkOptions>
+                            <dxga:MajorTickmarkOptions FactorLength="3" FactorThickness="2" Offset="-25"/>
+                        </dxga:ArcScale.MajorTickmarkOptions>
+                        <dxga:ArcScale.LinePresentation>
+                            <dxga:DefaultArcScaleLinePresentation Fill="Black"/>
+                        </dxga:ArcScale.LinePresentation>
+                        <dxga:ArcScale.Needles>
+                            <dxga:ArcScaleNeedle Value="{Binding Val2}" IsInteractive="True">
+                                <dxga:ArcScaleNeedle.Animation>
+                                    <dxga:IndicatorAnimation/>
+                                </dxga:ArcScaleNeedle.Animation>
+                                <dxga:ArcScaleNeedle.Presentation>
+                                    <dxga:DefaultArcScaleNeedlePresentation Fill="White"/>
+                                </dxga:ArcScaleNeedle.Presentation>
+                            </dxga:ArcScaleNeedle>
+                        </dxga:ArcScale.Needles>
+                    </dxga:ArcScale>
+                </dxga:CircularGaugeControl.Scales>
+            </dxga:CircularGaugeControl>
+        </Grid>
+
+        <Grid Grid.Column="1" HorizontalAlignment="Center" Height="480" Margin="0,0,0,0" VerticalAlignment="Center" Width="400">
+            <TextBlock HorizontalAlignment="Left" Margin="150,290,0,0" TextWrapping="Wrap" Text=".C x 100" VerticalAlignment="Top" Foreground="White" FontSize="25 " Width="112" Height="36"/>
+            <TextBlock HorizontalAlignment="Left" Margin="300,134,0,0" TextWrapping="Wrap" Text="EXH TEMP" VerticalAlignment="Top" Foreground="White" FontSize="25 " Width="69" Height="72"/>
+            <dxga:CircularGaugeControl Name="Ins2" Foreground="#FFDED9D9" FontSize="24" >
+                <dxga:CircularGaugeControl.Scales>
+                    <dxga:ArcScale EndAngle="234" EndValue="10" StartAngle="0">
+                        <dxga:ArcScale.LabelOptions>
+                            <dxga:ArcScaleLabelOptions Offset="-65"/>
+                        </dxga:ArcScale.LabelOptions>
+                        <dxga:ArcScale.TickmarksPresentation>
+                            <dxga:DefaultTickmarksPresentation MinorTickBrush="White" MajorTickBrush="White"/>
+                        </dxga:ArcScale.TickmarksPresentation>
+                        <dxga:ArcScale.MinorTickmarkOptions>
+                            <dxga:MinorTickmarkOptions FactorLength="2" FactorThickness="2"/>
+                        </dxga:ArcScale.MinorTickmarkOptions>
+                        <dxga:ArcScale.MajorTickmarkOptions>
+                            <dxga:MajorTickmarkOptions FactorLength="2" FactorThickness="2"/>
+                        </dxga:ArcScale.MajorTickmarkOptions>
+                        <dxga:ArcScale.Needles>
+                            <dxga:ArcScaleNeedle Value="{Binding Val}" IsInteractive="True">
+                                <dxga:ArcScaleNeedle.Animation>
+                                    <dxga:IndicatorAnimation/>
+                                </dxga:ArcScaleNeedle.Animation>
+                                <dxga:ArcScaleNeedle.Presentation>
+                                    <dxga:DefaultArcScaleNeedlePresentation Fill="White"/>
+                                </dxga:ArcScaleNeedle.Presentation>
+                            </dxga:ArcScaleNeedle>
+                        </dxga:ArcScale.Needles>
+                    </dxga:ArcScale>
+                </dxga:CircularGaugeControl.Scales>
+            </dxga:CircularGaugeControl>
+        </Grid>
+
+        <Grid Grid.Column="0" HorizontalAlignment="Left" Height="200" Margin="0,40,0,0" VerticalAlignment="Top" Width="200">
+            <dxga:CircularGaugeControl Name="Ins3" FontSize="20" Foreground="#FFB2B0B0" >
+                <dxga:CircularGaugeControl.Scales>
+                    <dxga:ArcScale EndAngle="270" EndValue="10" MinorIntervalCount="1" StartAngle="-90" >
+                        <dxga:ArcScale.LabelOptions>
+                            <dxga:ArcScaleLabelOptions ShowLast="False"/>
+                        </dxga:ArcScale.LabelOptions>
+                        <dxga:ArcScale.TickmarksPresentation>
+                            <dxga:DefaultTickmarksPresentation MajorTickBrush="White"/>
+                        </dxga:ArcScale.TickmarksPresentation>
+                        <dxga:ArcScale.MajorTickmarkOptions>
+                            <dxga:MajorTickmarkOptions FactorThickness="2"/>
+                        </dxga:ArcScale.MajorTickmarkOptions>
+                        <dxga:ArcScale.Needles>
+                            <dxga:ArcScaleNeedle Value="{Binding Val3}" IsInteractive="True">
+                                <dxga:ArcScaleNeedle.Animation>
+                                    <dxga:IndicatorAnimation/>
+                                </dxga:ArcScaleNeedle.Animation>
+                                <dxga:ArcScaleNeedle.Presentation>
+                                    <dxga:DefaultArcScaleNeedlePresentation Fill="White"/>
+                                </dxga:ArcScaleNeedle.Presentation>
+                            </dxga:ArcScaleNeedle>
+                        </dxga:ArcScale.Needles>
+                    </dxga:ArcScale>
+                </dxga:CircularGaugeControl.Scales>
+            </dxga:CircularGaugeControl>
+        </Grid>
+    </Grid>
+</dx:ThemedWindow>
